@@ -1,0 +1,8 @@
+*.pyc
+.DS_Store
+nohup.out
+.idea/
+inspectionProfiles/
+*/.ipynb_checkpoints/
+pyiron.log
+*/pyiron.log
