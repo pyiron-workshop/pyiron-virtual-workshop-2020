@@ -19,7 +19,7 @@ As a first step, follow [this guide](https://docs.conda.io/projects/conda/en/lat
 
 It is recommended to create a new conda environment to install the required packages for the workshop
 
-`conda create --name pyiron_workshop`
+`conda create --name pyiron_workshop python=3.7`
 
 To activate this conda environment, type
 
