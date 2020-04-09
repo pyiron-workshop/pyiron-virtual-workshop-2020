@@ -32,7 +32,7 @@ After the workshop is over, this environment can be deactivated `source deactiva
 
 To install the necessary packages type
 
-`conda install -c conda-forge pyiron nglview lammps sphinxdft`
+`conda install -c conda-forge pyiron nglview lammps sphinxdft=2.6.1=h6ced99e_5`
 
 
 
