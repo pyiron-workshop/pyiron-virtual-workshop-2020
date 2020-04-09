@@ -15,7 +15,7 @@ While pyiron can be installed in several ways, installation via conda is recomme
 As a first step, follow [this guide](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
 ) to install miniconda (recommended) or anaconda.
 
-#### Creating a new conda environment (optional)
+#### Creating a new conda environment
 
 It is recommended to create a new conda environment to install the required packages for the workshop
 
@@ -25,14 +25,21 @@ To activate this conda environment, type
 
 `source activate pyiron_workshop`
 
-After the workshop is over, this environment can be deactivated `source deactivate pyiron_workshop`
-
+After the workshop is over, this environment can be deactivated `source deactivate pyiron_workshop`.
 
 ### Installing pyiron and other packages using conda-forge
 
-To install the necessary packages type
+Once you've activated the `pyiron_workshop` environment, install the necessary packages using
 
-`conda install -c conda-forge pyiron nglview lammps sphinxdft=2.6.1=h6ced99e_5`
+`conda install -y -c conda-forge pyiron nglview lammps sphinxdft=2.6.1=h6ced99e_5 nodejs jupyterlab`
 
+Further, to get nglview working smoothly on jupyter notebooks, the following commands need to be typed
+
+```
+jupyter nbextension install nglview --py --sys-prefix
+jupyter nbextension enable nglview --py --sys-prefix
+jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
+jupyter labextension install nglview-js-widgets
+```
 
 
