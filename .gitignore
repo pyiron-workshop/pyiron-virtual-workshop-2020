@@ -6,3 +6,4 @@ inspectionProfiles/
 */.ipynb_checkpoints/
 pyiron.log
 */pyiron.log
+*.h5
