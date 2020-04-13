@@ -55,4 +55,12 @@ jupyter labextension install nglview-js-widgets
 jupyter labextension install @jupyterlab/toc
 ```
 
+### Configuring pyiron
 
+Type the following lines to configure pyiron and dowload the necessary resources (binaries and potentials)
+
+```
+cd
+printf "[DEFAULT]\nTOP_LEVEL_DIRS = ${HOME}\nRESOURCE_PATHS = ${HOME}/resources" > ${HOME}/.pyiron
+git clone https://github.com/pyiron/pyiron-resources.git ${HOME}/resources
+```
