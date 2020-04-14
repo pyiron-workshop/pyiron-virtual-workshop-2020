@@ -7,8 +7,7 @@ Tutorials, exercises, and solutions for the pyiron workshop 2020.
 For this workshop, you will need to have pyiron installed on your workstation. While 
 pyiron is platform independent, Linux is required to run certain external 
 simulation codes like LAMMPS and Sphinx. For windows users, it is recommended that you install the linux 
-subsystem for windows. More details [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
-If you are a Mac user, you will only be able to run LAMMPS examples (which is still fine!)
+subsystem for windows. More details [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10). THe Debian distribution of Linux is recommended although Ubuntu works fine as well. If you are a Mac user, you will only be able to run LAMMPS examples (which is still fine!)
 
 ### Installing conda
 
@@ -20,6 +19,7 @@ Choose the appropriate 64 bit or 32 bit installer available [here](https://docs.
 For example, the 64 bit executable for linux can be installed as follows:
 
 ```
+sudo apt-get install wget
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 chmod +x Miniconda3-latest-Linux-x86_64.sh
 ./Miniconda3-latest-Linux-x86_64.sh
@@ -33,10 +33,14 @@ After installing conda, it is recommended to create a new conda environment to i
 
 To activate this conda environment, type
 
-`source activate pyiron_workshop`
+`source activate pyiron_workshop
+
+or for MacOS
+
+`conda activate pyiron_workshop`
 
 Please install all packages and run the notebooks only after you have activated this environment. 
-After the workshop is over, this environment can be deactivated `source deactivate pyiron_workshop`.
+After the workshop is over, this environment can be deactivated `source deactivate` or `conda deactivate`.
 If you want to run the notebooks later, just reactivate the environment.
 
 ### Installing pyiron and other packages using conda-forge
