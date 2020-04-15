@@ -47,7 +47,7 @@ If you want to run the notebooks later, just reactivate the environment.
 
 Once you've activated the `pyiron_workshop` environment, install the necessary packages using
 
-`conda install -y -c conda-forge git pyiron nglview lammps nodejs jupyterlab`
+`conda install -y -c conda-forge git pyiron nglview lammps nodejs=13.13.0 jupyterlab`
 
 If you are using Linux (or Linux subsystem for windows), you can also use SPHINX
 
