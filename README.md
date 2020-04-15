@@ -33,7 +33,7 @@ After installing conda, it is recommended to create a new conda environment to i
 
 To activate this conda environment, type
 
-`source activate pyiron_workshop
+`source activate pyiron_workshop`
 
 or for MacOS
 
