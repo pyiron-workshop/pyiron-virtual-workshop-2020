@@ -23,6 +23,7 @@ sudo apt-get install wget
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 chmod +x Miniconda3-latest-Linux-x86_64.sh
 ./Miniconda3-latest-Linux-x86_64.sh
+source ~/.bashrc
 ```
 
 #### Creating a new conda environment
@@ -33,7 +34,7 @@ After installing conda, it is recommended to create a new conda environment to i
 
 To activate this conda environment, type
 
-`source activate pyiron_workshop
+`source activate pyiron_workshop`
 
 or for MacOS
 
@@ -47,7 +48,7 @@ If you want to run the notebooks later, just reactivate the environment.
 
 Once you've activated the `pyiron_workshop` environment, install the necessary packages using
 
-`conda install -y -c conda-forge git pyiron nglview lammps nodejs jupyterlab`
+`conda install -y -c conda-forge git pyiron nglview lammps nodejs=13.13.0 jupyterlab`
 
 If you are using Linux (or Linux subsystem for windows), you can also use SPHINX
 
