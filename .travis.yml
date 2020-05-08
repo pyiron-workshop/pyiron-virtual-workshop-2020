@@ -16,6 +16,8 @@ install:
   - pip install git+https://github.com/pyiron/pyiron
 script:
   - jupyter-book build book --path-output public
+  - mv public/_build/* public
+  - touch public/.nojekyll
 deploy:
   - provider: pages
     token: $GH_TOKEN
