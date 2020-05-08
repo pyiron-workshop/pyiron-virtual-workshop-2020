@@ -3,7 +3,7 @@ author: Sudarsan Surendralal
 logo: images/pyiron-logo.png
 
 repository:
-    url                       : https://github.com/jan-janssen/pyiron-virtual-workshop-2020
+    url                       : https://github.com/pyiron/pyiron-virtual-workshop-2020
     path_to_book              : "book/"
     
 binder:
