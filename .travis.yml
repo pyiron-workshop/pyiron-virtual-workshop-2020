@@ -11,7 +11,7 @@ install:
   - conda update -q conda
   - conda env update --name root --file binder/environment.yml
   - bash binder/postBuild
-  - conda install -c conda-forge libsass jupytext sphinx sphinx-book-theme
+  - conda install -c conda-forge libsass jupytext sphinx
   - pip install git+https://github.com/ExecutableBookProject/jupyter-book 
 script:
   - jupyter-book build book
