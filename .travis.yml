@@ -11,7 +11,7 @@ install:
   - conda update -q conda
   - conda env update --name root --file binder/environment.yml
   - bash binder/postBuild
-  - conda install -c conda-forge libsass jupytext sphinx=2.4.4 pybtex jupyter_sphinx sphinxcontrib-bibtex
+  - conda install -c conda-forge libsass jupytext sphinx=2.4.4 pybtex jupyter_sphinx sphinxcontrib-bibtex markdown-it-py myst-parser nest-asyncio async_generator nbclient nbdime sphinx-copybutton pydata-sphinx-theme
   - pip install git+https://github.com/ExecutableBookProject/jupyter-book 
   - pip install git+https://github.com/pyiron/pyiron
 script:
