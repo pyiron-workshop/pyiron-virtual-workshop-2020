@@ -16,12 +16,12 @@ install:
   - pip install git+https://github.com/pyiron/pyiron
 script:
   - jupyter-book build book --path-output public
-  - mv public/_build/* public
-  - touch public/.nojekyll
+  - mv public/_build/html public_html
+  - touch public_html/.nojekyll
 deploy:
   - provider: pages
     token: $GH_TOKEN
     skip_cleanup: true
-    local_dir: public
+    local_dir: public_html
     on:
       branch: master
