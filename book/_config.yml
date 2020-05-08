@@ -2,7 +2,6 @@ title: Pyiron Virtual Workshop 2020
 author: Sudarsan Surendralal
 logo: images/pyiron-logo.png
 repository:
-    url         : https://github.com/pmrv/pyiron-virtual-workshop-2020
+    url         : https://github.com/jan-janssen/pyiron-virtual-workshop-2020
 launch_buttons:
   binderhub_url: "https://mybinder.org"
-exclude_patterns: ["story_so_far/*", "tutorials/ex*"]
