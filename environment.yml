@@ -1,0 +1,18 @@
+channels:
+- conda-forge
+dependencies:
+- python
+- pyiron
+- lammps
+- gpaw
+- sphinxdft
+- nglview
+- seaborn
+- ovito
+- pyscal
+- yaff
+- quickff
+- tamkin
+- molmod
+- seekpath
+- jupyterlab=1.1.4
