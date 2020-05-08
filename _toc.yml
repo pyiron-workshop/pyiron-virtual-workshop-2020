@@ -1,0 +1,8 @@
+- file: README.md
+- file: tutorials/tutorials.md
+  sections:
+    - file: tutorials/sol_1_introduction
+    - file: tutorials/sol_2_pyiron_tables
+    - file: tutorials/sol_3_murnaghan_dft
+    - file: tutorials/sol_4_bandstructure
+    - file: tutorials/sol_5_gamma_surface
