@@ -1,0 +1,2082 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercise 1: Introduction to pyiron &#8212; Pyiron Virtual Workshop 2020</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Exercise 2: Working with pyiron tables analyze data" href="sol_2_pyiron_tables.html" />
+    <link rel="prev" title="Exercises" href="tutorials.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/pyiron-logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Pyiron Virtual Workshop 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   pyiron virtual workshop 2020: Workflows for atomistic simulations
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="tutorials.html">
+   Exercises
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Exercise 1: Introduction to pyiron
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sol_2_pyiron_tables.html">
+     Exercise 2: Working with pyiron tables analyze data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sol_3_murnaghan_dft.html">
+     Exercise 3: Murnaghan plots using sphinx
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sol_4_bandstructure.html">
+     Exercise 4: Band structure calculations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sol_4_bandstructure.html#structures-with-seekpath">
+     Structures with seekpath
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sol_5_gamma_surface.html">
+     Exercise 5: Development of our own mudule for Gamma surface calculations
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/tutorials/sol_1_introduction.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/pyiron/pyiron-virtual-workshop-2020/master?urlpath=tree/book/tutorials/sol_1_introduction.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/pyiron/pyiron-virtual-workshop-2020/blob/master/book/tutorials/sol_1_introduction.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imports-and-and-working-with-projects">
+   Imports and and working with projects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-and-manipulating-structures">
+   Creating and manipulating structures
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-bulk-water-consisting-of-several-water-molecules">
+     Creating bulk water consisting of several water molecules
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-an-al-supercell-with-interstitial-h">
+     Creating an Al supercell with interstitial H
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-al-sublattice">
+       Create Al sublattice
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-h-interstitial-sublattice">
+       Create H interstitial sublattice
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-a-2x2x4-supercell-for-both-lattices">
+       Create a 2x2x4 supercell for both lattices
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#occupy-the-h-sublattice-randomly-with-10-h-atoms">
+       Occupy the H sublattice randomly with 10 H atoms
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#combine-al-and-h-sublattice-in-same-supercell">
+       Combine Al and H sublattice in same supercell
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#perform-a-md-simulation-of-the-alh-supercell-using-lammps">
+   Perform a MD simulation of the AlH supercell using LAMMPS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setup-the-lammps-calculation">
+     Setup the Lammps calculation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#animate-md-trajectories">
+     Animate MD trajectories
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analyze-trajectories-in-more-detail">
+     Analyze trajectories in more detail
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#plot-al-trajectories-in-grey-h-ones-in-red">
+       Plot Al trajectories in grey, H ones in red
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualize-the-last-md-configuration">
+     Visualize the last MD configuration
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#take-the-last-configuration-and-perform-structure-relaxation-including-cell-relaxation-pressure-0">
+     Take the last configuration and perform structure relaxation (including cell relaxation - pressure=0)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analysis">
+   Analysis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-al-al-and-h-h-pair-correlation-function-of-the-last-md-structure">
+     Plot Al-Al and H-H pair correlation function of the last MD structure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-al-al-and-h-h-pair-correlation-function-after-structure-and-cell-relaxation">
+     Plot Al-Al and H-H pair correlation function after structure and cell relaxation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compare-al-al-pair-correlation-before-and-after-relaxation">
+     Compare Al-Al pair correlation before and after relaxation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#utility-functions">
+     Utility functions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#energy-volume-curves-for-al">
+   Energy volume curves for Al
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manual-setup-and-analysys">
+     Manual setup and analysys
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analysis-loading-vs-inspecting-jobs">
+     Analysis: Loading vs inspecting jobs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#energy-volume-curves-using-predefined-modules">
+   Energy-Volume curves using predefined modules
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setup-of-the-murnaghan-job-and-a-reference-calculation-for-the-parameters">
+     Setup of the Murnaghan job and a reference calculation for the parameters
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-and-inspecting-the-murnaghan-output">
+     Plotting and inspecting the murnaghan output
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#energy-volume-curves-for-a-variety-of-al-potentials">
+   Energy-volume curves for a variety of Al potentials
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#looping-over-available-potenitals">
+     Looping over available potenitals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analysing-over-all-potentials">
+     Analysing over all potentials
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="exercise-1-introduction-to-pyiron">
+<h1>Exercise 1: Introduction to pyiron<a class="headerlink" href="#exercise-1-introduction-to-pyiron" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="imports-and-and-working-with-projects">
+<h2>Imports and and working with projects<a class="headerlink" href="#imports-and-and-working-with-projects" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyiron</span> <span class="kn">import</span> <span class="n">Project</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span> <span class="o">=</span> <span class="n">Project</span><span class="p">(</span><span class="s2">&quot;demo&quot;</span><span class="p">)</span>
+
+<span class="c1"># To delete all jobs and start from scratch, uncomment the next line</span>
+<span class="c1">#pr.remove_jobs(recursive=True)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="creating-and-manipulating-structures">
+<h2>Creating and manipulating structures<a class="headerlink" href="#creating-and-manipulating-structures" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># atomistic structures</span>
+<span class="n">Al_struct</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_ase_bulk</span><span class="p">(</span><span class="s2">&quot;Al&quot;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">repeat</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">Al_struct</span><span class="o">.</span><span class="n">plot3d</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "d3c5a099741e4ac38ccb40c9dd929452"}
+</script><script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "93f0c6637b7f4472837cca6c89df8a02"}
+</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Al_struct</span><span class="p">[</span><span class="mi">36</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Cu&quot;</span>
+<span class="n">Al_struct</span><span class="o">.</span><span class="n">plot3d</span><span class="p">(</span><span class="n">particle_size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "5ae989f732694afc8a119da19144cb85"}
+</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">Al_struct</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span>
+<span class="n">Al_struct</span><span class="o">.</span><span class="n">plot3d</span><span class="p">(</span><span class="n">particle_size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "144112ac0800407692502f77580bcc98"}
+</script></div>
+</div>
+<div class="section" id="creating-bulk-water-consisting-of-several-water-molecules">
+<h3>Creating bulk water consisting of several water molecules<a class="headerlink" href="#creating-bulk-water-consisting-of-several-water-molecules" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cell</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="n">r_O</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">r_H1</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">]</span>
+<span class="n">r_H2</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.7</span><span class="p">]</span>
+<span class="n">water_molecule</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_atoms</span><span class="p">(</span><span class="s2">&quot;H2O&quot;</span><span class="p">,</span> <span class="n">positions</span><span class="o">=</span><span class="p">[</span><span class="n">r_H1</span><span class="p">,</span> <span class="n">r_H2</span><span class="p">,</span> <span class="n">r_O</span><span class="p">],</span> <span class="n">cell</span><span class="o">=</span><span class="n">cell</span><span class="p">)</span>
+<span class="n">water_molecule</span><span class="o">.</span><span class="n">center</span><span class="p">()</span>
+<span class="n">water_molecule</span><span class="o">.</span><span class="n">set_cell</span><span class="p">(</span><span class="n">water_molecule</span><span class="o">.</span><span class="n">cell</span> <span class="o">*</span> <span class="n">water_molecule</span><span class="o">.</span><span class="n">get_density</span><span class="p">()</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">),</span> <span class="n">scale_atoms</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">water_molecule</span><span class="o">.</span><span class="n">get_density</span><span class="p">()</span>
+<span class="n">water_box</span> <span class="o">=</span> <span class="n">water_molecule</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">water_box</span><span class="o">.</span><span class="n">center_coordinates_in_unit_cell</span><span class="p">()</span>
+<span class="n">water_box</span><span class="o">.</span><span class="n">plot3d</span><span class="p">(</span><span class="n">spacefill</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "f14b50f5602f418098be419ec6b3251c"}
+</script></div>
+</div>
+</div>
+<div class="section" id="creating-an-al-supercell-with-interstitial-h">
+<h3>Creating an Al supercell with interstitial H<a class="headerlink" href="#creating-an-al-supercell-with-interstitial-h" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="create-al-sublattice">
+<h4>Create Al sublattice<a class="headerlink" href="#create-al-sublattice" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Al_struct</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_ase_bulk</span><span class="p">(</span><span class="s2">&quot;Al&quot;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-h-interstitial-sublattice">
+<h4>Create H interstitial sublattice<a class="headerlink" href="#create-h-interstitial-sublattice" title="Permalink to this headline">¶</a></h4>
+<p>Translate the H position by half the unit cell vectors.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H_int</span> <span class="o">=</span> <span class="n">Al_struct</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">H_int</span><span class="p">[:]</span> <span class="o">=</span> <span class="s2">&quot;H&quot;</span>
+<span class="n">H_int</span><span class="o">.</span><span class="n">positions</span> <span class="o">+=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">H_int</span><span class="o">.</span><span class="n">cell</span> <span class="o">@</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-a-2x2x4-supercell-for-both-lattices">
+<h4>Create a 2x2x4 supercell for both lattices<a class="headerlink" href="#create-a-2x2x4-supercell-for-both-lattices" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Al_struct</span><span class="o">.</span><span class="n">set_repeat</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">H_int</span><span class="o">.</span><span class="n">set_repeat</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="occupy-the-h-sublattice-randomly-with-10-h-atoms">
+<h4>Occupy the H sublattice randomly with 10 H atoms<a class="headerlink" href="#occupy-the-h-sublattice-randomly-with-10-h-atoms" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rand_int</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">H_int</span><span class="p">))</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">rand_int</span><span class="p">)</span>
+<span class="n">H_int</span> <span class="o">=</span> <span class="n">H_int</span><span class="p">[</span><span class="n">rand_int</span><span class="p">[:</span><span class="mi">10</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="combine-al-and-h-sublattice-in-same-supercell">
+<h4>Combine Al and H sublattice in same supercell<a class="headerlink" href="#combine-al-and-h-sublattice-in-same-supercell" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AlH_struct</span> <span class="o">=</span> <span class="n">Al_struct</span> <span class="o">+</span> <span class="n">H_int</span>
+<span class="n">AlH_struct</span><span class="o">.</span><span class="n">plot3d</span><span class="p">(</span><span class="n">particle_size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "e2b54fe755f04b739f1a8f2887a8db21"}
+</script></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="perform-a-md-simulation-of-the-alh-supercell-using-lammps">
+<h2>Perform a MD simulation of the AlH supercell using LAMMPS<a class="headerlink" href="#perform-a-md-simulation-of-the-alh-supercell-using-lammps" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setup-the-lammps-calculation">
+<h3>Setup the Lammps calculation<a class="headerlink" href="#setup-the-lammps-calculation" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_lammps</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_job</span><span class="p">(</span><span class="n">job_type</span><span class="o">=</span><span class="n">pr</span><span class="o">.</span><span class="n">job_type</span><span class="o">.</span><span class="n">Lammps</span><span class="p">,</span> <span class="n">job_name</span><span class="o">=</span> <span class="s2">&quot;AlH_lammps&quot;</span><span class="p">)</span>
+<span class="n">job_lammps</span><span class="o">.</span><span class="n">structure</span> <span class="o">=</span> <span class="n">AlH_struct</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">job_lammps</span><span class="o">.</span><span class="n">list_potentials</span><span class="p">())</span>
+<span class="n">job_lammps</span><span class="o">.</span><span class="n">potential</span> <span class="o">=</span>  <span class="s1">&#39;Al_H_Ni_Angelo_eam&#39;</span>
+<span class="n">job_lammps</span><span class="o">.</span><span class="n">calc_md</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">n_ionic_steps</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Al_H_Ni_Angelo_eam&#39;, &#39;1995--Angelo-J-E--Ni-Al-H--LAMMPS--ipr1&#39;, &#39;2018--Zhou-X-W--Al-Cu-H--LAMMPS--ipr1&#39;, &#39;EAM_Dynamo_AngeloMoodyBaskes_1995_NiAlH__MO_418978237058_005&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_lammps</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job AlH_lammps was saved and received the ID: 1
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="animate-md-trajectories">
+<h3>Animate MD trajectories<a class="headerlink" href="#animate-md-trajectories" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_lammps</span><span class="o">.</span><span class="n">animate_structure</span><span class="p">(</span><span class="n">particle_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "3226e37cf4e14893aae1c0432362a852"}
+</script></div>
+</div>
+</div>
+<div class="section" id="analyze-trajectories-in-more-detail">
+<h3>Analyze trajectories in more detail<a class="headerlink" href="#analyze-trajectories-in-more-detail" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H_indices</span> <span class="o">=</span> <span class="n">AlH_struct</span><span class="o">.</span><span class="n">select_index</span><span class="p">(</span><span class="s2">&quot;H&quot;</span><span class="p">)</span>
+<span class="n">Al_indices</span> <span class="o">=</span> <span class="n">AlH_struct</span><span class="o">.</span><span class="n">select_index</span><span class="p">(</span><span class="s2">&quot;Al&quot;</span><span class="p">)</span>
+<span class="n">H_indices</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([64, 65, 66, 67, 68, 69, 70, 71, 72, 73])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="plot-al-trajectories-in-grey-h-ones-in-red">
+<h4>Plot Al trajectories in grey, H ones in red<a class="headerlink" href="#plot-al-trajectories-in-grey-h-ones-in-red" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">job_lammps</span><span class="o">.</span><span class="n">output</span><span class="o">.</span><span class="n">unwrapped_positions</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">job_lammps</span><span class="o">.</span><span class="n">output</span><span class="o">.</span><span class="n">unwrapped_positions</span><span class="p">[:,</span> <span class="n">H_indices</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;time [fs]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;positions [$\AA$]&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/sol_1_introduction_31_0.png" src="../_images/sol_1_introduction_31_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualize-the-last-md-configuration">
+<h3>Visualize the last MD configuration<a class="headerlink" href="#visualize-the-last-md-configuration" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">md_struct</span> <span class="o">=</span> <span class="n">job_lammps</span><span class="o">.</span><span class="n">get_structure</span><span class="p">(</span><span class="n">iteration_step</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">md_struct</span><span class="o">.</span><span class="n">plot3d</span><span class="p">(</span><span class="n">particle_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "5d92bd3d40d64077b747b7c392da09d5"}
+</script></div>
+</div>
+</div>
+<div class="section" id="take-the-last-configuration-and-perform-structure-relaxation-including-cell-relaxation-pressure-0">
+<h3>Take the last configuration and perform structure relaxation (including cell relaxation - pressure=0)<a class="headerlink" href="#take-the-last-configuration-and-perform-structure-relaxation-including-cell-relaxation-pressure-0" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_lammps_minimize</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_job</span><span class="p">(</span><span class="n">pr</span><span class="o">.</span><span class="n">job_type</span><span class="o">.</span><span class="n">Lammps</span><span class="p">,</span> <span class="s2">&quot;AlH_minimize&quot;</span><span class="p">)</span>
+<span class="n">job_lammps_minimize</span><span class="o">.</span><span class="n">structure</span> <span class="o">=</span> <span class="n">md_struct</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_lammps_minimize</span><span class="o">.</span><span class="n">potential</span> <span class="o">=</span> <span class="n">job_lammps</span><span class="o">.</span><span class="n">potential</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="c1"># this looks not so nice, could we take a copy of job_lammps?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_lammps_minimize</span><span class="o">.</span><span class="n">calc_minimize</span><span class="p">(</span><span class="n">pressure</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">job_lammps_minimize</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job AlH_minimize was saved and received the ID: 2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">job_lammps_minimize</span><span class="o">.</span><span class="n">output</span><span class="o">.</span><span class="n">volume</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Volume vs iteration&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Volume [$A^3$]&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/sol_1_introduction_38_0.png" src="../_images/sol_1_introduction_38_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_lammps_minimize</span><span class="o">.</span><span class="n">animate_structure</span><span class="p">(</span><span class="n">particle_size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "8bcc14dfb3ce4feba4b5df41c23c6dbc"}
+</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_lammps_minimize</span><span class="o">.</span><span class="n">get_structure</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">plot3d</span><span class="p">(</span><span class="n">particle_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "e8ccf560dc854c9caa2812a7cb4e91f0"}
+</script></div>
+</div>
+</div>
+</div>
+<div class="section" id="analysis">
+<h2>Analysis<a class="headerlink" href="#analysis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="plot-al-al-and-h-h-pair-correlation-function-of-the-last-md-structure">
+<h3>Plot Al-Al and H-H pair correlation function of the last MD structure<a class="headerlink" href="#plot-al-al-and-h-h-pair-correlation-function-of-the-last-md-structure" title="Permalink to this headline">¶</a></h3>
+<p>This is done using the <code class="docutils literal notranslate"><span class="pre">get_neighbors()</span></code> function</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">neighbors_md</span> <span class="o">=</span> <span class="n">md_struct</span><span class="p">[</span><span class="n">Al_indices</span><span class="p">]</span><span class="o">.</span><span class="n">get_neighbors</span><span class="p">(</span><span class="n">num_neighbors</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">neighbors_md</span><span class="o">.</span><span class="n">distances</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Al-Al&quot;</span><span class="p">)</span>
+<span class="n">neighbors_md</span> <span class="o">=</span> <span class="n">md_struct</span><span class="p">[</span><span class="n">H_indices</span><span class="p">]</span><span class="o">.</span><span class="n">get_neighbors</span><span class="p">(</span><span class="n">num_neighbors</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">neighbors_md</span><span class="o">.</span><span class="n">distances</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;H-H&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;distance [A]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/sol_1_introduction_43_0.png" src="../_images/sol_1_introduction_43_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="plot-al-al-and-h-h-pair-correlation-function-after-structure-and-cell-relaxation">
+<h3>Plot Al-Al and H-H pair correlation function after structure and cell relaxation<a class="headerlink" href="#plot-al-al-and-h-h-pair-correlation-function-after-structure-and-cell-relaxation" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">min_struct</span> <span class="o">=</span> <span class="n">job_lammps_minimize</span><span class="o">.</span><span class="n">get_structure</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">neighbors_min</span> <span class="o">=</span> <span class="n">min_struct</span><span class="p">[</span><span class="n">Al_indices</span><span class="p">]</span><span class="o">.</span><span class="n">get_neighbors</span><span class="p">(</span><span class="n">num_neighbors</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">neighbors_min</span><span class="o">.</span><span class="n">distances</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Al-Al&quot;</span><span class="p">)</span>
+<span class="n">neighbors_min</span> <span class="o">=</span> <span class="n">min_struct</span><span class="p">[</span><span class="n">H_indices</span><span class="p">]</span><span class="o">.</span><span class="n">get_neighbors</span><span class="p">(</span><span class="n">num_neighbors</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">neighbors_min</span><span class="o">.</span><span class="n">distances</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;H-H&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;distance [A]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/sol_1_introduction_45_0.png" src="../_images/sol_1_introduction_45_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="compare-al-al-pair-correlation-before-and-after-relaxation">
+<h3>Compare Al-Al pair correlation before and after relaxation<a class="headerlink" href="#compare-al-al-pair-correlation-before-and-after-relaxation" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">neighbors_min</span> <span class="o">=</span> <span class="n">min_struct</span><span class="p">[</span><span class="n">Al_indices</span><span class="p">]</span><span class="o">.</span><span class="n">get_neighbors</span><span class="p">(</span><span class="n">num_neighbors</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">neighbors_min</span><span class="o">.</span><span class="n">distances</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Al-Al min&quot;</span><span class="p">)</span>
+<span class="n">neighbors_md</span> <span class="o">=</span> <span class="n">md_struct</span><span class="p">[</span><span class="n">Al_indices</span><span class="p">]</span><span class="o">.</span><span class="n">get_neighbors</span><span class="p">(</span><span class="n">num_neighbors</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">neighbors_md</span><span class="o">.</span><span class="n">distances</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Al-Al md&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/sol_1_introduction_47_0.png" src="../_images/sol_1_introduction_47_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="utility-functions">
+<h3>Utility functions<a class="headerlink" href="#utility-functions" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span><span class="o">.</span><span class="n">job_table</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>status</th>
+      <th>chemicalformula</th>
+      <th>job</th>
+      <th>subjob</th>
+      <th>projectpath</th>
+      <th>project</th>
+      <th>timestart</th>
+      <th>timestop</th>
+      <th>totalcputime</th>
+      <th>computer</th>
+      <th>hamilton</th>
+      <th>hamversion</th>
+      <th>parentid</th>
+      <th>masterid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>finished</td>
+      <td>Al64H10</td>
+      <td>AlH_lammps</td>
+      <td>/AlH_lammps</td>
+      <td>/home/travis/</td>
+      <td>build/pyiron/pyiron-virtual-workshop-2020/book/tutorials/demo/</td>
+      <td>2020-09-30 14:36:29.191335</td>
+      <td>2020-09-30 14:36:31.218013</td>
+      <td>2.0</td>
+      <td>pyiron@travis-job-76968e81-4576-4290-bf25-c20919dd98c9#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>finished</td>
+      <td>Al64H10</td>
+      <td>AlH_minimize</td>
+      <td>/AlH_minimize</td>
+      <td>/home/travis/</td>
+      <td>build/pyiron/pyiron-virtual-workshop-2020/book/tutorials/demo/</td>
+      <td>2020-09-30 14:36:32.669760</td>
+      <td>2020-09-30 14:36:33.407418</td>
+      <td>0.0</td>
+      <td>pyiron@travis-job-76968e81-4576-4290-bf25-c20919dd98c9#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_md_reloaded</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;AlH_lammps&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_min_reloaded</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;AlH_minimize&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">job_min_reloaded</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pyiron.lammps.lammps.Lammps
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;groups&#39;: [], &#39;nodes&#39;: [&#39;AlH_lammps&#39;, &#39;AlH_minimize&#39;]}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span><span class="p">[</span><span class="s2">&quot;AlH_lammps&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;groups&#39;: [&#39;input&#39;, &#39;output&#39;], &#39;nodes&#39;: [&#39;HDF_VERSION&#39;, &#39;NAME&#39;, &#39;TYPE&#39;, &#39;VERSION&#39;, &#39;server&#39;, &#39;status&#39;]}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span><span class="p">[</span><span class="s2">&quot;AlH_lammps/input&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;groups&#39;: [&#39;control_inp&#39;, &#39;generic&#39;, &#39;potential&#39;, &#39;potential_inp&#39;, &#39;structure&#39;], &#39;nodes&#39;: [&#39;generic_dict&#39;, &#39;interactive&#39;]}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span><span class="p">[</span><span class="s2">&quot;AlH_lammps/output/generic/forces&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span>  <span class="n">pr</span><span class="p">[</span><span class="s2">&quot;AlH_lammps/output/generic/energy_tot&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>((101, 74, 3), (101,))
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="energy-volume-curves-for-al">
+<h2>Energy volume curves for Al<a class="headerlink" href="#energy-volume-curves-for-al" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="manual-setup-and-analysys">
+<h3>Manual setup and analysys<a class="headerlink" href="#manual-setup-and-analysys" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span> <span class="o">=</span> <span class="n">Project</span><span class="p">(</span><span class="s2">&quot;demo/Al_murnaghan_manual&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">3.9</span><span class="p">,</span> <span class="mf">4.1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">a_list</span><span class="p">:</span>
+    <span class="n">job_name</span> <span class="o">=</span> <span class="s2">&quot;Al_a_</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span>
+    <span class="n">job</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_job</span><span class="p">(</span><span class="n">pr</span><span class="o">.</span><span class="n">job_type</span><span class="o">.</span><span class="n">Lammps</span><span class="p">,</span> <span class="n">job_name</span><span class="p">)</span>
+    <span class="n">job</span><span class="o">.</span><span class="n">structure</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_ase_bulk</span><span class="p">(</span><span class="s2">&quot;Al&quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">job</span><span class="o">.</span><span class="n">potential</span> <span class="o">=</span> <span class="s1">&#39;Al_H_Ni_Angelo_eam&#39;</span>
+    <span class="n">job</span><span class="o">.</span><span class="n">calc_minimize</span><span class="p">()</span>
+    <span class="n">job</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job Al_a_3_9 was saved and received the ID: 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job Al_a_3_92 was saved and received the ID: 4
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job Al_a_3_94 was saved and received the ID: 5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job Al_a_3_96 was saved and received the ID: 6
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job Al_a_3_98 was saved and received the ID: 7
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job Al_a_4_0 was saved and received the ID: 8
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job Al_a_4_02 was saved and received the ID: 9
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job Al_a_4_04 was saved and received the ID: 10
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job Al_a_4_06 was saved and received the ID: 11
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job Al_a_4_08 was saved and received the ID: 12
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job Al_a_4_1 was saved and received the ID: 13
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span><span class="o">.</span><span class="n">job_table</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="analysis-loading-vs-inspecting-jobs">
+<h3>Analysis: Loading vs inspecting jobs<a class="headerlink" href="#analysis-loading-vs-inspecting-jobs" title="Permalink to this headline">¶</a></h3>
+<p>The data from these calculations are retreived either by loading each of these jobs or by inspecting them (from their hdf5 files).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_loaded</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;Al_a_3_9&quot;</span><span class="p">)</span>
+<span class="n">struct</span> <span class="o">=</span> <span class="n">job_loaded</span><span class="o">.</span><span class="n">get_structure</span><span class="p">()</span>
+<span class="n">job_loaded</span><span class="o">.</span><span class="n">output</span><span class="o">.</span><span class="n">energy_tot</span><span class="p">,</span> <span class="n">job_loaded</span><span class="p">[</span><span class="s2">&quot;output/generic/energy_tot&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">job_loaded</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([-13.21258266, -13.21258266]),
+ array([-13.21258266, -13.21258266]),
+ pyiron.lammps.lammps.Lammps)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_inspect</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="s2">&quot;Al_a_3_9&quot;</span><span class="p">)</span>
+<span class="n">job_loaded</span><span class="p">[</span><span class="s2">&quot;output/generic/energy_tot&quot;</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">job_inspect</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([-13.21258266, -13.21258266]), pyiron_base.job.path.JobPath)
+</pre></div>
+</div>
+</div>
+</div>
+<p>So why use the inspect mode if recreating the object gives access to all it’s pyiron functions? The inspect mode is actually much faster if you only want to access certain values without recreating the entire job object.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">convert_to_object</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># True to load the job</span>
+<span class="n">vol_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="n">energy_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="c1"># Set recursive=False to only go over the higher levels and not return jobs from subprojects</span>
+<span class="k">for</span> <span class="n">job</span> <span class="ow">in</span> <span class="n">pr</span><span class="o">.</span><span class="n">iter_jobs</span><span class="p">(</span><span class="n">convert_to_object</span><span class="o">=</span><span class="n">convert_to_object</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">job</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;finished&quot;</span><span class="p">:</span>
+        <span class="n">vol_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">job</span><span class="p">[</span><span class="s2">&quot;output/generic/volume&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">energy_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">job</span><span class="p">[</span><span class="s2">&quot;output/generic/energy_tot&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vol_list</span><span class="p">,</span> <span class="n">energy_list</span><span class="p">,</span> <span class="s2">&quot;-x&quot;</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 83.4 ms, sys: 7.08 ms, total: 90.5 ms
+Wall time: 89.3 ms
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pyiron_base.job.path.JobPath
+</pre></div>
+</div>
+<img alt="../_images/sol_1_introduction_66_2.png" src="../_images/sol_1_introduction_66_2.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="energy-volume-curves-using-predefined-modules">
+<h2>Energy-Volume curves using predefined modules<a class="headerlink" href="#energy-volume-curves-using-predefined-modules" title="Permalink to this headline">¶</a></h2>
+<p>We will now use the predefined Murnaghan module to compute equilibrium T=0K properties</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span> <span class="o">=</span> <span class="n">Project</span><span class="p">(</span><span class="s2">&quot;demo/murnaghan_automatic&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="setup-of-the-murnaghan-job-and-a-reference-calculation-for-the-parameters">
+<h3>Setup of the Murnaghan job and a reference calculation for the parameters<a class="headerlink" href="#setup-of-the-murnaghan-job-and-a-reference-calculation-for-the-parameters" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the Murnaghan &quot;job&quot;</span>
+<span class="n">murn</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_job</span><span class="p">(</span><span class="n">pr</span><span class="o">.</span><span class="n">job_type</span><span class="o">.</span><span class="n">Murnaghan</span><span class="p">,</span> <span class="s2">&quot;murn_test&quot;</span><span class="p">)</span>
+<span class="c1"># Create a reference job which contains all simulation parameters</span>
+<span class="n">job_ref</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_job</span><span class="p">(</span><span class="n">pr</span><span class="o">.</span><span class="n">job_type</span><span class="o">.</span><span class="n">Lammps</span><span class="p">,</span> <span class="s2">&quot;Al_ref&quot;</span><span class="p">)</span>
+<span class="n">job_ref</span><span class="o">.</span><span class="n">structure</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_ase_bulk</span><span class="p">(</span><span class="s2">&quot;Al&quot;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">job_ref</span><span class="o">.</span><span class="n">potential</span> <span class="o">=</span> <span class="s1">&#39;Al_H_Ni_Angelo_eam&#39;</span>
+<span class="n">job_ref</span><span class="o">.</span><span class="n">calc_minimize</span><span class="p">()</span>
+<span class="n">murn</span><span class="o">.</span><span class="n">ref_job</span> <span class="o">=</span> <span class="n">job_ref</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The Murnaghan job creates individual LAMMPS calculations with a strained unitcell</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">murn</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job murn_test was saved and received the ID: 14
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_0_9 was saved and received the ID: 15
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_0_92 was saved and received the ID: 16
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_0_94 was saved and received the ID: 17
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_0_96 was saved and received the ID: 18
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_0_98 was saved and received the ID: 19
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_1_0 was saved and received the ID: 20
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_1_02 was saved and received the ID: 21
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_1_04 was saved and received the ID: 22
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_1_06 was saved and received the ID: 23
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_1_08 was saved and received the ID: 24
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_1_1 was saved and received the ID: 25
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>job_id:  15 finished
+job_id:  16 finished
+job_id:  17 finished
+job_id:  18 finished
+job_id:  19 finished
+job_id:  20 finished
+job_id:  21 finished
+job_id:  22 finished
+job_id:  23 finished
+job_id:  24 finished
+job_id:  25 finished
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span><span class="o">.</span><span class="n">job_table</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>status</th>
+      <th>chemicalformula</th>
+      <th>job</th>
+      <th>subjob</th>
+      <th>projectpath</th>
+      <th>project</th>
+      <th>timestart</th>
+      <th>timestop</th>
+      <th>totalcputime</th>
+      <th>computer</th>
+      <th>hamilton</th>
+      <th>hamversion</th>
+      <th>parentid</th>
+      <th>masterid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>14</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>murn_test</td>
+      <td>/murn_test</td>
+      <td>/home/travis/</td>
+      <td>build/pyiron/pyiron-virtual-workshop-2020/book/tutorials/demo/murnaghan_automatic/</td>
+      <td>2020-09-30 14:36:46.122729</td>
+      <td>2020-09-30 14:36:58.613423</td>
+      <td>12.0</td>
+      <td>pyiron@travis-job-76968e81-4576-4290-bf25-c20919dd98c9#1#11/11</td>
+      <td>Murnaghan</td>
+      <td>0.3.0</td>
+      <td>None</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>15</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_0_9</td>
+      <td>/strain_0_9</td>
+      <td>/home/travis/</td>
+      <td>build/pyiron/pyiron-virtual-workshop-2020/book/tutorials/demo/murnaghan_automatic/murn_test_hdf5/</td>
+      <td>2020-09-30 14:36:46.884505</td>
+      <td>2020-09-30 14:36:47.176097</td>
+      <td>0.0</td>
+      <td>pyiron@travis-job-76968e81-4576-4290-bf25-c20919dd98c9#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>16</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_0_92</td>
+      <td>/strain_0_92</td>
+      <td>/home/travis/</td>
+      <td>build/pyiron/pyiron-virtual-workshop-2020/book/tutorials/demo/murnaghan_automatic/murn_test_hdf5/</td>
+      <td>2020-09-30 14:36:47.926767</td>
+      <td>2020-09-30 14:36:48.219979</td>
+      <td>0.0</td>
+      <td>pyiron@travis-job-76968e81-4576-4290-bf25-c20919dd98c9#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>17</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_0_94</td>
+      <td>/strain_0_94</td>
+      <td>/home/travis/</td>
+      <td>build/pyiron/pyiron-virtual-workshop-2020/book/tutorials/demo/murnaghan_automatic/murn_test_hdf5/</td>
+      <td>2020-09-30 14:36:49.133851</td>
+      <td>2020-09-30 14:36:49.460843</td>
+      <td>0.0</td>
+      <td>pyiron@travis-job-76968e81-4576-4290-bf25-c20919dd98c9#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>18</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_0_96</td>
+      <td>/strain_0_96</td>
+      <td>/home/travis/</td>
+      <td>build/pyiron/pyiron-virtual-workshop-2020/book/tutorials/demo/murnaghan_automatic/murn_test_hdf5/</td>
+      <td>2020-09-30 14:36:50.227521</td>
+      <td>2020-09-30 14:36:50.542048</td>
+      <td>0.0</td>
+      <td>pyiron@travis-job-76968e81-4576-4290-bf25-c20919dd98c9#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>19</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_0_98</td>
+      <td>/strain_0_98</td>
+      <td>/home/travis/</td>
+      <td>build/pyiron/pyiron-virtual-workshop-2020/book/tutorials/demo/murnaghan_automatic/murn_test_hdf5/</td>
+      <td>2020-09-30 14:36:51.309452</td>
+      <td>2020-09-30 14:36:51.614671</td>
+      <td>0.0</td>
+      <td>pyiron@travis-job-76968e81-4576-4290-bf25-c20919dd98c9#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>20</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_1_0</td>
+      <td>/strain_1_0</td>
+      <td>/home/travis/</td>
+      <td>build/pyiron/pyiron-virtual-workshop-2020/book/tutorials/demo/murnaghan_automatic/murn_test_hdf5/</td>
+      <td>2020-09-30 14:36:52.368575</td>
+      <td>2020-09-30 14:36:52.674001</td>
+      <td>0.0</td>
+      <td>pyiron@travis-job-76968e81-4576-4290-bf25-c20919dd98c9#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>21</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_1_02</td>
+      <td>/strain_1_02</td>
+      <td>/home/travis/</td>
+      <td>build/pyiron/pyiron-virtual-workshop-2020/book/tutorials/demo/murnaghan_automatic/murn_test_hdf5/</td>
+      <td>2020-09-30 14:36:53.424696</td>
+      <td>2020-09-30 14:36:53.724891</td>
+      <td>0.0</td>
+      <td>pyiron@travis-job-76968e81-4576-4290-bf25-c20919dd98c9#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>22</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_1_04</td>
+      <td>/strain_1_04</td>
+      <td>/home/travis/</td>
+      <td>build/pyiron/pyiron-virtual-workshop-2020/book/tutorials/demo/murnaghan_automatic/murn_test_hdf5/</td>
+      <td>2020-09-30 14:36:54.505028</td>
+      <td>2020-09-30 14:36:54.835001</td>
+      <td>0.0</td>
+      <td>pyiron@travis-job-76968e81-4576-4290-bf25-c20919dd98c9#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>23</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_1_06</td>
+      <td>/strain_1_06</td>
+      <td>/home/travis/</td>
+      <td>build/pyiron/pyiron-virtual-workshop-2020/book/tutorials/demo/murnaghan_automatic/murn_test_hdf5/</td>
+      <td>2020-09-30 14:36:55.640647</td>
+      <td>2020-09-30 14:36:55.967062</td>
+      <td>0.0</td>
+      <td>pyiron@travis-job-76968e81-4576-4290-bf25-c20919dd98c9#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>24</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_1_08</td>
+      <td>/strain_1_08</td>
+      <td>/home/travis/</td>
+      <td>build/pyiron/pyiron-virtual-workshop-2020/book/tutorials/demo/murnaghan_automatic/murn_test_hdf5/</td>
+      <td>2020-09-30 14:36:56.775639</td>
+      <td>2020-09-30 14:36:57.092517</td>
+      <td>0.0</td>
+      <td>pyiron@travis-job-76968e81-4576-4290-bf25-c20919dd98c9#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>25</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_1_1</td>
+      <td>/strain_1_1</td>
+      <td>/home/travis/</td>
+      <td>build/pyiron/pyiron-virtual-workshop-2020/book/tutorials/demo/murnaghan_automatic/murn_test_hdf5/</td>
+      <td>2020-09-30 14:36:57.887756</td>
+      <td>2020-09-30 14:36:58.200738</td>
+      <td>0.0</td>
+      <td>pyiron@travis-job-76968e81-4576-4290-bf25-c20919dd98c9#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>14.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="plotting-and-inspecting-the-murnaghan-output">
+<h3>Plotting and inspecting the murnaghan output<a class="headerlink" href="#plotting-and-inspecting-the-murnaghan-output" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">murn</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/sol_1_introduction_75_0.png" src="../_images/sol_1_introduction_75_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">murn</span><span class="p">[</span><span class="s2">&quot;output&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;groups&#39;: [&#39;structure&#39;], &#39;nodes&#39;: [&#39;energy&#39;, &#39;equilibrium_b_prime&#39;, &#39;equilibrium_bulk_modulus&#39;, &#39;equilibrium_energy&#39;, &#39;equilibrium_volume&#39;, &#39;error&#39;, &#39;id&#39;, &#39;volume&#39;]}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">murn</span><span class="p">[</span><span class="s2">&quot;output/equilibrium_volume&quot;</span><span class="p">]</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">),</span> <span class="n">murn</span><span class="p">[</span><span class="s2">&quot;output/equilibrium_bulk_modulus&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4.0499537135806065, 81.04044546400824)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">murn</span><span class="o">.</span><span class="n">fit_dict</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;poly_fit&#39;: array([-9.56553731e-05,  2.28697903e-02, -1.77209828e+00,  3.13985247e+01]),
+ &#39;fit_type&#39;: &#39;polynomial&#39;,
+ &#39;fit_order&#39;: 3,
+ &#39;volume_eq&#39;: 66.42784738704815,
+ &#39;energy_eq&#39;: -13.440396614411753,
+ &#39;bulkmodul_eq&#39;: 81.04044546400824,
+ &#39;b_prime_eq&#39;: 4.006907327543454,
+ &#39;least_square_error&#39;: 1.1456196778579513e-07}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_child</span> <span class="o">=</span> <span class="n">murn</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="energy-volume-curves-for-a-variety-of-al-potentials">
+<h2>Energy-volume curves for a variety of Al potentials<a class="headerlink" href="#energy-volume-curves-for-a-variety-of-al-potentials" title="Permalink to this headline">¶</a></h2>
+<p>Since an E-V curve can be calculated quite easily, we can now do this for a range of available Al potentials (keep in mind that some of these potentials might fail)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span> <span class="o">=</span> <span class="n">Project</span><span class="p">(</span><span class="s2">&quot;demo/potential_scan&quot;</span><span class="p">)</span>
+<span class="c1">###pr.remove_jobs()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="looping-over-available-potenitals">
+<h3>Looping over available potenitals<a class="headerlink" href="#looping-over-available-potenitals" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Chosing only a few potentials since there are lots of Al potentials</span>
+
+<span class="n">potential_list</span> <span class="o">=</span> <span class="n">job_child</span><span class="o">.</span><span class="n">list_potentials</span><span class="p">()[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">pot</span> <span class="ow">in</span> <span class="n">potential_list</span><span class="p">:</span>
+    <span class="n">pot_str</span> <span class="o">=</span> <span class="n">pot</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span>
+    <span class="c1"># open a subproject within a project</span>
+    <span class="k">with</span> <span class="n">pr</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">pot_str</span><span class="p">)</span> <span class="k">as</span> <span class="n">pr_sub</span><span class="p">:</span>
+        <span class="c1"># no need for unique job name if in different subprojects </span>
+        <span class="n">job_name</span> <span class="o">=</span> <span class="s2">&quot;murn_Al&quot;</span>
+        <span class="c1"># Use the subproject to create the jobs</span>
+        <span class="n">murn</span> <span class="o">=</span> <span class="n">pr_sub</span><span class="o">.</span><span class="n">create_job</span><span class="p">(</span><span class="n">pr</span><span class="o">.</span><span class="n">job_type</span><span class="o">.</span><span class="n">Murnaghan</span><span class="p">,</span> <span class="n">job_name</span><span class="p">)</span>
+        <span class="n">job_ref</span> <span class="o">=</span> <span class="n">pr_sub</span><span class="o">.</span><span class="n">create_job</span><span class="p">(</span><span class="n">pr</span><span class="o">.</span><span class="n">job_type</span><span class="o">.</span><span class="n">Lammps</span><span class="p">,</span> <span class="s2">&quot;Al_ref&quot;</span><span class="p">)</span>
+        <span class="n">job_ref</span><span class="o">.</span><span class="n">structure</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_ase_bulk</span><span class="p">(</span><span class="s2">&quot;Al&quot;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">job_ref</span><span class="o">.</span><span class="n">potential</span> <span class="o">=</span> <span class="n">pot</span>
+        <span class="n">job_ref</span><span class="o">.</span><span class="n">calc_minimize</span><span class="p">()</span>
+        <span class="n">murn</span><span class="o">.</span><span class="n">ref_job</span> <span class="o">=</span> <span class="n">job_ref</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">murn</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">:</span>
+            <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job murn_Al was saved and received the ID: 26
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_0_9 was saved and received the ID: 27
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_0_92 was saved and received the ID: 28
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_0_94 was saved and received the ID: 29
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_0_96 was saved and received the ID: 30
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_0_98 was saved and received the ID: 31
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_1_0 was saved and received the ID: 32
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_1_02 was saved and received the ID: 33
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_1_04 was saved and received the ID: 34
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_1_06 was saved and received the ID: 35
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_1_08 was saved and received the ID: 36
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_1_1 was saved and received the ID: 37
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>job_id:  27 finished
+job_id:  28 finished
+job_id:  29 finished
+job_id:  30 finished
+job_id:  31 finished
+job_id:  32 finished
+job_id:  33 finished
+job_id:  34 finished
+job_id:  35 finished
+job_id:  36 finished
+job_id:  37 finished
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job murn_Al was saved and received the ID: 38
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_0_9 was saved and received the ID: 39
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_0_92 was saved and received the ID: 40
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_0_94 was saved and received the ID: 41
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_0_96 was saved and received the ID: 42
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_0_98 was saved and received the ID: 43
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_1_0 was saved and received the ID: 44
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_1_02 was saved and received the ID: 45
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_1_04 was saved and received the ID: 46
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_1_06 was saved and received the ID: 47
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_1_08 was saved and received the ID: 48
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_1_1 was saved and received the ID: 49
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>job_id:  39 finished
+job_id:  40 finished
+job_id:  41 finished
+job_id:  42 finished
+job_id:  43 finished
+job_id:  44 finished
+job_id:  45 finished
+job_id:  46 finished
+job_id:  47 finished
+job_id:  48 finished
+job_id:  49 finished
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job murn_Al was saved and received the ID: 50
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_0_9 was saved and received the ID: 51
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_0_92 was saved and received the ID: 52
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_0_94 was saved and received the ID: 53
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;2000__Landa_A__Al_Pb__LAMMPS__ipr1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">job_table</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>status</th>
+      <th>chemicalformula</th>
+      <th>job</th>
+      <th>subjob</th>
+      <th>projectpath</th>
+      <th>project</th>
+      <th>timestart</th>
+      <th>timestop</th>
+      <th>totalcputime</th>
+      <th>computer</th>
+      <th>hamilton</th>
+      <th>hamversion</th>
+      <th>parentid</th>
+      <th>masterid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>573</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>murn_Al</td>
+      <td>/murn_Al</td>
+      <td>/home/ponder/</td>
+      <td>science/phd/dev/pyiron-virtual-workshop-2020/book/tutorials/demo/potential_scan/2000__Landa_A__Al_Pb__LAMMPS__ipr1/</td>
+      <td>2020-08-10 09:33:44.242878</td>
+      <td>2020-08-10 09:33:55.660839</td>
+      <td>11.0</td>
+      <td>pyiron@susan#1#11/11</td>
+      <td>Murnaghan</td>
+      <td>0.3.0</td>
+      <td>None</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>574</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_0_9</td>
+      <td>/strain_0_9</td>
+      <td>/home/ponder/</td>
+      <td>science/phd/dev/pyiron-virtual-workshop-2020/book/tutorials/demo/potential_scan/2000__Landa_A__Al_Pb__LAMMPS__ipr1/murn_Al_hdf5/</td>
+      <td>2020-08-10 09:33:44.945319</td>
+      <td>2020-08-10 09:33:45.293532</td>
+      <td>0.0</td>
+      <td>pyiron@susan#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>573.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>575</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_0_92</td>
+      <td>/strain_0_92</td>
+      <td>/home/ponder/</td>
+      <td>science/phd/dev/pyiron-virtual-workshop-2020/book/tutorials/demo/potential_scan/2000__Landa_A__Al_Pb__LAMMPS__ipr1/murn_Al_hdf5/</td>
+      <td>2020-08-10 09:33:45.902598</td>
+      <td>2020-08-10 09:33:46.239607</td>
+      <td>0.0</td>
+      <td>pyiron@susan#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>573.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>576</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_0_94</td>
+      <td>/strain_0_94</td>
+      <td>/home/ponder/</td>
+      <td>science/phd/dev/pyiron-virtual-workshop-2020/book/tutorials/demo/potential_scan/2000__Landa_A__Al_Pb__LAMMPS__ipr1/murn_Al_hdf5/</td>
+      <td>2020-08-10 09:33:46.867103</td>
+      <td>2020-08-10 09:33:47.216269</td>
+      <td>0.0</td>
+      <td>pyiron@susan#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>573.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>577</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_0_96</td>
+      <td>/strain_0_96</td>
+      <td>/home/ponder/</td>
+      <td>science/phd/dev/pyiron-virtual-workshop-2020/book/tutorials/demo/potential_scan/2000__Landa_A__Al_Pb__LAMMPS__ipr1/murn_Al_hdf5/</td>
+      <td>2020-08-10 09:33:47.831134</td>
+      <td>2020-08-10 09:33:48.167521</td>
+      <td>0.0</td>
+      <td>pyiron@susan#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>573.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>578</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_0_98</td>
+      <td>/strain_0_98</td>
+      <td>/home/ponder/</td>
+      <td>science/phd/dev/pyiron-virtual-workshop-2020/book/tutorials/demo/potential_scan/2000__Landa_A__Al_Pb__LAMMPS__ipr1/murn_Al_hdf5/</td>
+      <td>2020-08-10 09:33:48.848455</td>
+      <td>2020-08-10 09:33:49.187766</td>
+      <td>0.0</td>
+      <td>pyiron@susan#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>573.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>579</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_1_0</td>
+      <td>/strain_1_0</td>
+      <td>/home/ponder/</td>
+      <td>science/phd/dev/pyiron-virtual-workshop-2020/book/tutorials/demo/potential_scan/2000__Landa_A__Al_Pb__LAMMPS__ipr1/murn_Al_hdf5/</td>
+      <td>2020-08-10 09:33:49.824299</td>
+      <td>2020-08-10 09:33:50.166694</td>
+      <td>0.0</td>
+      <td>pyiron@susan#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>573.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>580</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_1_02</td>
+      <td>/strain_1_02</td>
+      <td>/home/ponder/</td>
+      <td>science/phd/dev/pyiron-virtual-workshop-2020/book/tutorials/demo/potential_scan/2000__Landa_A__Al_Pb__LAMMPS__ipr1/murn_Al_hdf5/</td>
+      <td>2020-08-10 09:33:50.808705</td>
+      <td>2020-08-10 09:33:51.176068</td>
+      <td>0.0</td>
+      <td>pyiron@susan#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>573.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>581</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_1_04</td>
+      <td>/strain_1_04</td>
+      <td>/home/ponder/</td>
+      <td>science/phd/dev/pyiron-virtual-workshop-2020/book/tutorials/demo/potential_scan/2000__Landa_A__Al_Pb__LAMMPS__ipr1/murn_Al_hdf5/</td>
+      <td>2020-08-10 09:33:51.824512</td>
+      <td>2020-08-10 09:33:52.193449</td>
+      <td>0.0</td>
+      <td>pyiron@susan#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>573.0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>582</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_1_06</td>
+      <td>/strain_1_06</td>
+      <td>/home/ponder/</td>
+      <td>science/phd/dev/pyiron-virtual-workshop-2020/book/tutorials/demo/potential_scan/2000__Landa_A__Al_Pb__LAMMPS__ipr1/murn_Al_hdf5/</td>
+      <td>2020-08-10 09:33:52.952479</td>
+      <td>2020-08-10 09:33:53.298574</td>
+      <td>0.0</td>
+      <td>pyiron@susan#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>573.0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>583</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_1_08</td>
+      <td>/strain_1_08</td>
+      <td>/home/ponder/</td>
+      <td>science/phd/dev/pyiron-virtual-workshop-2020/book/tutorials/demo/potential_scan/2000__Landa_A__Al_Pb__LAMMPS__ipr1/murn_Al_hdf5/</td>
+      <td>2020-08-10 09:33:53.929181</td>
+      <td>2020-08-10 09:33:54.279539</td>
+      <td>0.0</td>
+      <td>pyiron@susan#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>573.0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>584</td>
+      <td>finished</td>
+      <td>Al4</td>
+      <td>strain_1_1</td>
+      <td>/strain_1_1</td>
+      <td>/home/ponder/</td>
+      <td>science/phd/dev/pyiron-virtual-workshop-2020/book/tutorials/demo/potential_scan/2000__Landa_A__Al_Pb__LAMMPS__ipr1/murn_Al_hdf5/</td>
+      <td>2020-08-10 09:33:54.954389</td>
+      <td>2020-08-10 09:33:55.319029</td>
+      <td>0.0</td>
+      <td>pyiron@susan#1</td>
+      <td>Lammps</td>
+      <td>0.1</td>
+      <td>None</td>
+      <td>573.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span><span class="o">.</span><span class="n">job_table</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="analysing-over-all-potentials">
+<h3>Analysing over all potentials<a class="headerlink" href="#analysing-over-all-potentials" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">eq_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="n">convert_to_object</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">pr</span><span class="o">.</span><span class="n">list_groups</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">convert_to_object</span><span class="p">:</span>
+        <span class="n">murn</span> <span class="o">=</span> <span class="n">pr</span><span class="p">[</span><span class="n">group</span><span class="o">+</span><span class="s2">&quot;/murn_Al&quot;</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">murn</span> <span class="o">=</span> <span class="n">pr</span><span class="p">[</span><span class="n">group</span><span class="p">]</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="s2">&quot;murn_Al&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">murn</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;finished&quot;</span><span class="p">:</span>
+        <span class="n">eq_dict</span><span class="p">[</span><span class="n">group</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="n">eq_dict</span><span class="p">[</span><span class="n">group</span><span class="p">][</span><span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">murn</span><span class="p">[</span><span class="s2">&quot;output/equilibrium_volume&quot;</span><span class="p">]</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">eq_dict</span><span class="p">[</span><span class="n">group</span><span class="p">][</span><span class="s2">&quot;bulk_modulus&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">murn</span><span class="p">[</span><span class="s2">&quot;output/equilibrium_bulk_modulus&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 351 ms, sys: 0 ns, total: 351 ms
+Wall time: 123 ms
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">eq_dict</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+      <th>bulk_modulus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1997__Liu_X_Y__Al_Mg__LAMMPS__ipr1</th>
+      <td>4.032659</td>
+      <td>83.498560</td>
+    </tr>
+    <tr>
+      <th>2000__Landa_A__Al_Pb__LAMMPS__ipr1</th>
+      <td>4.031246</td>
+      <td>78.213776</td>
+    </tr>
+    <tr>
+      <th>2003__Zope_R_R__Al__LAMMPS__ipr1</th>
+      <td>4.049946</td>
+      <td>80.836777</td>
+    </tr>
+    <tr>
+      <th>2004__Zhou_X_W__Al__LAMMPS__ipr1</th>
+      <td>4.050315</td>
+      <td>71.546946</td>
+    </tr>
+    <tr>
+      <th>2004__Zhou_X_W__Al__LAMMPS__ipr2</th>
+      <td>4.050316</td>
+      <td>71.546634</td>
+    </tr>
+    <tr>
+      <th>2015__Mendelev_M_I__Al_Sm__LAMMPS__ipr1</th>
+      <td>4.041196</td>
+      <td>85.017411</td>
+    </tr>
+    <tr>
+      <th>Al_H_Ni_Angelo_eam</th>
+      <td>4.049954</td>
+      <td>81.040445</td>
+    </tr>
+    <tr>
+      <th>Al_Mg_Mendelev_eam</th>
+      <td>4.045415</td>
+      <td>89.015487</td>
+    </tr>
+    <tr>
+      <th>Zope_Ti_Al_2003_eam</th>
+      <td>4.049946</td>
+      <td>80.836779</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tutorials"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="tutorials.html" title="previous page">Exercises</a>
+    <a class='right-next' id="next-link" href="sol_2_pyiron_tables.html" title="next page">Exercise 2: Working with pyiron tables analyze data</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sudarsan Surendralal<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

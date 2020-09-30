@@ -1,0 +1,1318 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercise 3: Murnaghan plots using sphinx &#8212; Pyiron Virtual Workshop 2020</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Exercise 4: Band structure calculations" href="sol_4_bandstructure.html" />
+    <link rel="prev" title="Exercise 2: Working with pyiron tables analyze data" href="sol_2_pyiron_tables.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/pyiron-logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Pyiron Virtual Workshop 2020</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   pyiron virtual workshop 2020: Workflows for atomistic simulations
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="tutorials.html">
+   Exercises
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="sol_1_introduction.html">
+     Exercise 1: Introduction to pyiron
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sol_2_pyiron_tables.html">
+     Exercise 2: Working with pyiron tables analyze data
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Exercise 3: Murnaghan plots using sphinx
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sol_4_bandstructure.html">
+     Exercise 4: Band structure calculations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sol_4_bandstructure.html#structures-with-seekpath">
+     Structures with seekpath
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sol_5_gamma_surface.html">
+     Exercise 5: Development of our own mudule for Gamma surface calculations
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/tutorials/sol_3_murnaghan_dft.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/pyiron/pyiron-virtual-workshop-2020/master?urlpath=tree/book/tutorials/sol_3_murnaghan_dft.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/pyiron/pyiron-virtual-workshop-2020/blob/master/book/tutorials/sol_3_murnaghan_dft.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#perform-a-static-energy-calculation-of-bulk-al-using-dft-sphinx-as-open-source-dft-code">
+   Perform a static energy calculation of bulk Al using DFT (Sphinx as open source DFT code)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inspecting-the-input-parameters">
+     Inspecting the input parameters
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-the-fermi-dirac-distribution-of-the-electronic-occupancies">
+     Plotting the Fermi-Dirac distribution of the electronic occupancies
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inspecting-the-output">
+     Inspecting the output
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-an-e-v-curve">
+   Plotting an E-V curve
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analyzing-the-outputs">
+     Analyzing the outputs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-e-v-curves">
+     Plotting E-V curves
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-pandas-for-analysis">
+     Using pandas for analysis
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-the-murnaghan-module-to-scan-over-different-k-points-and-energy-cutoff-values-as-in-ex-2">
+   Use the murnaghan module to scan over different k-points and energy cutoff values as in ex_2
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-pyiron-tables">
+     Using pyiron tables
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="exercise-3-murnaghan-plots-using-sphinx">
+<h1>Exercise 3: Murnaghan plots using sphinx<a class="headerlink" href="#exercise-3-murnaghan-plots-using-sphinx" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyiron</span> <span class="kn">import</span> <span class="n">Project</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">ast</span> <span class="kn">import</span> <span class="n">literal_eval</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="perform-a-static-energy-calculation-of-bulk-al-using-dft-sphinx-as-open-source-dft-code">
+<h2>Perform a static energy calculation of bulk Al using DFT (Sphinx as open source DFT code)<a class="headerlink" href="#perform-a-static-energy-calculation-of-bulk-al-using-dft-sphinx-as-open-source-dft-code" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span> <span class="o">=</span> <span class="n">Project</span><span class="p">(</span><span class="s2">&quot;demo/sphinx_demo&quot;</span><span class="p">)</span>
+<span class="n">pr</span><span class="o">.</span><span class="n">remove_jobs</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">914</span><span class="n">ab94a0009</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">pr</span> <span class="o">=</span> <span class="n">Project</span><span class="p">(</span><span class="s2">&quot;demo/sphinx_demo&quot;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">pr</span><span class="o">.</span><span class="n">remove_jobs</span><span class="p">()</span>
+
+<span class="nn">~/miniconda/lib/python3.7/site-packages/pyiron_base/project/generic.py</span> in <span class="ni">remove_jobs</span><span class="nt">(self, recursive)</span>
+<span class="g g-Whitespace">    </span><span class="mi">967</span>                 <span class="n">confirmed</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">968</span>                     <span class="s2">&quot;Are you sure you want to delete all jobs from &quot;</span>
+<span class="ne">--&gt; </span><span class="mi">969</span>                     <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">base_name</span><span class="si">}</span><span class="s2">&#39;? y/(n)&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">970</span>                     <span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">971</span>             <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">~/miniconda/lib/python3.7/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">856</span>         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">857</span>             <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
+<span class="ne">--&gt; </span><span class="mi">858</span>                 <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">859</span>             <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">860</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_sphinx</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_job</span><span class="p">(</span><span class="n">pr</span><span class="o">.</span><span class="n">job_type</span><span class="o">.</span><span class="n">Sphinx</span><span class="p">,</span> <span class="s2">&quot;test_sphinx&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_sphinx</span><span class="o">.</span><span class="n">structure</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_ase_bulk</span><span class="p">(</span><span class="s2">&quot;Al&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_sphinx</span><span class="o">.</span><span class="n">set_occupancy_smearing</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_sphinx</span><span class="o">.</span><span class="n">plane_wave_cutoff</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>340
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_sphinx</span><span class="o">.</span><span class="n">xc</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;PBE&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_sphinx</span><span class="o">.</span><span class="n">set_kpoints</span><span class="p">(</span><span class="n">mesh</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="inspecting-the-input-parameters">
+<h3>Inspecting the input parameters<a class="headerlink" href="#inspecting-the-input-parameters" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_sphinx</span><span class="o">.</span><span class="n">input</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Parameter</th>
+      <th>Value</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>EnCut</td>
+      <td>340</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>KpointCoords</td>
+      <td>[0.5, 0.5, 0.5]</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>KpointFolding</td>
+      <td>[5, 5, 5]</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>EmptyStates</td>
+      <td>auto</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Sigma</td>
+      <td>0.1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Xcorr</td>
+      <td>PBE</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>VaspPot</td>
+      <td>False</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Estep</td>
+      <td>400</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Ediff</td>
+      <td>1.0e-4</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>WriteWaves</td>
+      <td>True</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>KJxc</td>
+      <td>False</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>SaveMemory</td>
+      <td>True</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>CoarseRun</td>
+      <td>False</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>rhoMixing</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>spinMixing</td>
+      <td>1.0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>CheckOverlap</td>
+      <td>True</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>THREADS</td>
+      <td>1</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_sphinx</span><span class="o">.</span><span class="n">calc_static</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_sphinx</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job test_sphinx was saved and received the ID: 833
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_sphinx</span><span class="o">.</span><span class="n">status</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;finished&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plotting-the-fermi-dirac-distribution-of-the-electronic-occupancies">
+<h3>Plotting the Fermi-Dirac distribution of the electronic occupancies<a class="headerlink" href="#plotting-the-fermi-dirac-distribution-of-the-electronic-occupancies" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_sphinx</span><span class="p">[</span><span class="s2">&quot;output/generic/dft&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;groups&#39;: [], &#39;nodes&#39;: [&#39;bands_e_fermi&#39;, &#39;bands_eigen_values&#39;, &#39;bands_k_weights&#39;, &#39;bands_occ&#39;, &#39;computation_time&#39;, &#39;electronic_entropy&#39;, &#39;energy_band&#39;, &#39;energy_free&#39;, &#39;energy_int&#39;, &#39;energy_zero&#39;, &#39;n_valence&#39;, &#39;residue&#39;, &#39;scf_computation_time&#39;, &#39;scf_convergence&#39;, &#39;scf_electronic_entropy&#39;, &#39;scf_energy_band&#39;, &#39;scf_energy_free&#39;, &#39;scf_energy_int&#39;, &#39;scf_energy_zero&#39;, &#39;scf_residue&#39;]}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">job_sphinx</span><span class="p">[</span><span class="s2">&quot;output/generic/dft/scf_energy_int&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The first index is the spin (only 1 for non-magnetic calculation)</span>
+<span class="n">eigen_values</span> <span class="o">=</span> <span class="n">job_sphinx</span><span class="p">[</span><span class="s2">&quot;output/generic/dft/bands_eigen_values&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<span class="n">args</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">eigen_values</span><span class="p">)</span>
+<span class="n">eigen_values</span> <span class="o">=</span> <span class="n">eigen_values</span><span class="p">[</span><span class="n">args</span><span class="p">]</span>
+<span class="n">occ</span> <span class="o">=</span> <span class="n">job_sphinx</span><span class="p">[</span><span class="s2">&quot;output/generic/dft/bands_occ&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">()[</span><span class="n">args</span><span class="p">]</span>
+<span class="n">efermi</span> <span class="o">=</span> <span class="n">job_sphinx</span><span class="p">[</span><span class="s2">&quot;output/generic/dft/bands_e_fermi&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">eigen_values</span> <span class="o">-=</span> <span class="n">efermi</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">eigen_values</span><span class="p">,</span> <span class="n">occ</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Energy [eV]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Occupancy&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/sol_3_murnaghan_dft_19_0.png" src="../_images/sol_3_murnaghan_dft_19_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="inspecting-the-output">
+<h3>Inspecting the output<a class="headerlink" href="#inspecting-the-output" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_sphinx</span><span class="p">[</span><span class="s2">&quot;output/generic&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;groups&#39;: [&#39;dft&#39;], &#39;nodes&#39;: [&#39;cells&#39;, &#39;computation_time&#39;, &#39;energy_pot&#39;, &#39;energy_tot&#39;, &#39;forces&#39;, &#39;positions&#39;, &#39;volume&#39;]}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job_sphinx</span><span class="p">[</span><span class="s2">&quot;output/generic/energy_tot&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-57.21641920181957
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plotting-an-e-v-curve">
+<h2>Plotting an E-V curve<a class="headerlink" href="#plotting-an-e-v-curve" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span> <span class="o">=</span> <span class="n">Project</span><span class="p">(</span><span class="s2">&quot;demo/murnaghan_Al_dft&quot;</span><span class="p">)</span>
+<span class="n">pr</span><span class="o">.</span><span class="n">remove_jobs</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">3.9</span><span class="p">,</span> <span class="mf">4.2</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">encut_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">350</span><span class="p">]</span>
+<span class="n">kpoint_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">kpt</span> <span class="ow">in</span> <span class="n">kpoint_list</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">encut</span> <span class="ow">in</span> <span class="n">encut_list</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">a_range</span><span class="p">:</span>
+            <span class="n">job_name</span> <span class="o">=</span> <span class="s2">&quot;job_name_a_</span><span class="si">{:.4}</span><span class="s2">_encut_</span><span class="si">{}</span><span class="s2">_kpt_</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">encut</span><span class="p">,</span> <span class="n">kpt</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">job_name</span><span class="p">)</span>
+            <span class="n">job</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_job</span><span class="p">(</span><span class="n">pr</span><span class="o">.</span><span class="n">job_type</span><span class="o">.</span><span class="n">Sphinx</span><span class="p">,</span> <span class="n">job_name</span><span class="p">)</span>
+            <span class="n">job</span><span class="o">.</span><span class="n">structure</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_ase_bulk</span><span class="p">(</span><span class="s2">&quot;Al&quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="p">)</span>
+            <span class="n">job</span><span class="o">.</span><span class="n">plane_wave_cutoff</span> <span class="o">=</span> <span class="n">encut</span>
+            <span class="n">k_mesh</span> <span class="o">=</span> <span class="p">[</span><span class="n">kpt</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+            <span class="n">job</span><span class="o">.</span><span class="n">set_kpoints</span><span class="p">(</span><span class="n">mesh</span><span class="o">=</span><span class="n">k_mesh</span><span class="p">)</span>
+            <span class="n">job</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>job_name_a_3_9_encut_350_kpt_12
+The job job_name_a_3_9_encut_350_kpt_12 was saved and received the ID: 834
+job_name_a_3_96_encut_350_kpt_12
+The job job_name_a_3_96_encut_350_kpt_12 was saved and received the ID: 835
+job_name_a_4_02_encut_350_kpt_12
+The job job_name_a_4_02_encut_350_kpt_12 was saved and received the ID: 836
+job_name_a_4_08_encut_350_kpt_12
+The job job_name_a_4_08_encut_350_kpt_12 was saved and received the ID: 837
+job_name_a_4_14_encut_350_kpt_12
+The job job_name_a_4_14_encut_350_kpt_12 was saved and received the ID: 838
+job_name_a_4_2_encut_350_kpt_12
+The job job_name_a_4_2_encut_350_kpt_12 was saved and received the ID: 839
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span><span class="o">.</span><span class="n">job_table</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="analyzing-the-outputs">
+<h3>Analyzing the outputs<a class="headerlink" href="#analyzing-the-outputs" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_volume</span><span class="p">(</span><span class="n">job</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">job</span><span class="p">[</span><span class="s2">&quot;output/generic/volume&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">get_lattice_parameter</span><span class="p">(</span><span class="n">job</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">job</span><span class="p">[</span><span class="s2">&quot;output/generic/cells&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">get_total_energy</span><span class="p">(</span><span class="n">job</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">job</span><span class="p">[</span><span class="s2">&quot;output/generic/energy_tot&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">get_encut_kpoints</span><span class="p">(</span><span class="n">job</span><span class="p">):</span>
+    <span class="n">str_list</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">job_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)</span>
+    <span class="n">kpts</span> <span class="o">=</span> <span class="p">[</span><span class="n">str_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">*</span> <span class="mi">3</span>
+    <span class="n">encut</span> <span class="o">=</span> <span class="n">str_list</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">encut</span><span class="p">,</span> <span class="n">kpts</span>
+
+<span class="k">def</span> <span class="nf">get_n_scf</span><span class="p">(</span><span class="n">job</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">job</span><span class="p">[</span><span class="s2">&quot;output/generic/dft/scf_energy_int&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">get_properties</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="n">job</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_lattice_parameter</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;e_tot&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_total_energy</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;encut&quot;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;kpoints&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_encut_kpoints</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;n_scf&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_n_scf</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job</span><span class="p">[</span><span class="s2">&quot;input/structure/cell/cell&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job</span><span class="p">[</span><span class="s2">&quot;output/generic/energy_tot&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-57.23284122857466
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">job_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">3</span><span class="p">]),</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">job_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])]</span> <span class="o">*</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(350, [12, 12, 12])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pyiron.sphinx.sphinx.Sphinx
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">job</span><span class="p">[</span><span class="s2">&quot;output/generic/dft&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;groups&#39;: [], &#39;nodes&#39;: [&#39;bands_e_fermi&#39;, &#39;bands_eigen_values&#39;, &#39;bands_k_weights&#39;, &#39;bands_occ&#39;, &#39;computation_time&#39;, &#39;electronic_entropy&#39;, &#39;energy_band&#39;, &#39;energy_free&#39;, &#39;energy_int&#39;, &#39;energy_zero&#39;, &#39;n_valence&#39;, &#39;residue&#39;, &#39;scf_computation_time&#39;, &#39;scf_convergence&#39;, &#39;scf_electronic_entropy&#39;, &#39;scf_energy_band&#39;, &#39;scf_energy_free&#39;, &#39;scf_energy_int&#39;, &#39;scf_energy_zero&#39;, &#39;scf_residue&#39;]}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plotting-e-v-curves">
+<h3>Plotting E-V curves<a class="headerlink" href="#plotting-e-v-curves" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">erg_lst</span><span class="p">,</span> <span class="n">vol_lst</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">job</span> <span class="ow">in</span> <span class="n">pr</span><span class="o">.</span><span class="n">iter_jobs</span><span class="p">(</span><span class="n">convert_to_object</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">erg_lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">get_total_energy</span><span class="p">(</span><span class="n">job</span><span class="p">))</span>
+    <span class="n">vol_lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">get_volume</span><span class="p">(</span><span class="n">job</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 93.8 ms, sys: 31.2 ms, total: 125 ms
+Wall time: 102 ms
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">erg_fit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">vol_lst</span><span class="p">,</span> <span class="n">erg_lst</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">vol_fit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">vol_lst</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">vol_lst</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vol_lst</span><span class="p">,</span> <span class="n">erg_lst</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vol_fit</span><span class="p">,</span> <span class="n">erg_fit</span><span class="p">(</span><span class="n">vol_fit</span><span class="p">),</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;fit&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/sol_3_murnaghan_dft_37_0.png" src="../_images/sol_3_murnaghan_dft_37_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="using-pandas-for-analysis">
+<h3>Using pandas for analysis<a class="headerlink" href="#using-pandas-for-analysis" title="Permalink to this headline">¶</a></h3>
+<p>An alternate way to analyze these notebooks (if you are not a fan of for loops)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">job_table</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">status</span><span class="o">==</span><span class="s2">&quot;finished&quot;</span><span class="p">]</span>
+<span class="n">df</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">df_result</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_properties</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_result</span><span class="p">[[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;e_tot&quot;</span><span class="p">,</span> <span class="s2">&quot;encut&quot;</span><span class="p">,</span> <span class="s2">&quot;kpoints&quot;</span><span class="p">,</span> <span class="s2">&quot;n_scf&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 188 ms, sys: 15.6 ms, total: 203 ms
+Wall time: 209 ms
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+      <th>e_tot</th>
+      <th>encut</th>
+      <th>kpoints</th>
+      <th>n_scf</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3.90</td>
+      <td>-57.209575</td>
+      <td>350</td>
+      <td>[12, 12, 12]</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3.96</td>
+      <td>-57.249233</td>
+      <td>350</td>
+      <td>[12, 12, 12]</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4.02</td>
+      <td>-57.268643</td>
+      <td>350</td>
+      <td>[12, 12, 12]</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.08</td>
+      <td>-57.270688</td>
+      <td>350</td>
+      <td>[12, 12, 12]</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4.14</td>
+      <td>-57.257964</td>
+      <td>350</td>
+      <td>[12, 12, 12]</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>4.20</td>
+      <td>-57.232841</td>
+      <td>350</td>
+      <td>[12, 12, 12]</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="use-the-murnaghan-module-to-scan-over-different-k-points-and-energy-cutoff-values-as-in-ex-2">
+<h2>Use the murnaghan module to scan over different k-points and energy cutoff values as in ex_2<a class="headerlink" href="#use-the-murnaghan-module-to-scan-over-different-k-points-and-energy-cutoff-values-as-in-ex-2" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span> <span class="o">=</span> <span class="n">Project</span><span class="p">(</span><span class="s2">&quot;demo/murnaghan_dft&quot;</span><span class="p">)</span>
+<span class="c1">###pr.remove_jobs()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">encut_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">250</span><span class="p">,</span> <span class="mi">350</span><span class="p">,</span> <span class="mi">450</span><span class="p">]</span>
+<span class="c1">#kpoint_list = [4, 8, 12, 16]</span>
+<span class="n">kpoint_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">kpt</span> <span class="ow">in</span> <span class="n">kpoint_list</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">encut</span> <span class="ow">in</span> <span class="n">encut_list</span><span class="p">:</span>
+        <span class="n">job_name</span> <span class="o">=</span> <span class="s2">&quot;murn_Al_encut_</span><span class="si">{}</span><span class="s2">_kpt_</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">encut</span><span class="p">,</span> <span class="n">kpt</span><span class="p">)</span>
+        <span class="n">murn</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_job</span><span class="p">(</span><span class="n">pr</span><span class="o">.</span><span class="n">job_type</span><span class="o">.</span><span class="n">Murnaghan</span><span class="p">,</span> <span class="n">job_name</span><span class="p">)</span>
+        <span class="n">job_ref</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_job</span><span class="p">(</span><span class="n">pr</span><span class="o">.</span><span class="n">job_type</span><span class="o">.</span><span class="n">Sphinx</span><span class="p">,</span> <span class="s2">&quot;Al_ref&quot;</span><span class="p">)</span>
+        <span class="n">job_ref</span><span class="o">.</span><span class="n">structure</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_ase_bulk</span><span class="p">(</span><span class="s2">&quot;Al&quot;</span><span class="p">)</span>
+        <span class="n">job_ref</span><span class="o">.</span><span class="n">calc_static</span><span class="p">()</span>
+        <span class="n">job_ref</span><span class="o">.</span><span class="n">plane_wave_cutoff</span> <span class="o">=</span> <span class="n">encut</span>
+        <span class="n">k_mesh</span> <span class="o">=</span> <span class="p">[</span><span class="n">kpt</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+        <span class="n">job_ref</span><span class="o">.</span><span class="n">set_kpoints</span><span class="p">(</span><span class="n">mesh</span><span class="o">=</span><span class="n">k_mesh</span><span class="p">)</span>
+        <span class="n">murn</span><span class="o">.</span><span class="n">ref_job</span> <span class="o">=</span> <span class="n">job_ref</span>
+        <span class="n">murn</span><span class="o">.</span><span class="n">input</span><span class="p">[</span><span class="s2">&quot;num_points&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9</span>
+        <span class="n">murn</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2020-04-15 00:26:59,380 - pyiron_log - WARNING - The job murn_Al_encut_250_kpt_4 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
+2020-04-15 00:26:59,893 - pyiron_log - WARNING - The job murn_Al_encut_350_kpt_4 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
+2020-04-15 00:27:01,032 - pyiron_log - WARNING - The job murn_Al_encut_450_kpt_4 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
+2020-04-15 00:27:02,324 - pyiron_log - WARNING - The job murn_Al_encut_250_kpt_8 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
+2020-04-15 00:27:03,683 - pyiron_log - WARNING - The job murn_Al_encut_350_kpt_8 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
+2020-04-15 00:27:04,407 - pyiron_log - WARNING - The job murn_Al_encut_450_kpt_8 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
+2020-04-15 00:27:05,050 - pyiron_log - WARNING - The job murn_Al_encut_250_kpt_12 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
+2020-04-15 00:27:05,634 - pyiron_log - WARNING - The job murn_Al_encut_350_kpt_12 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
+2020-04-15 00:27:06,227 - pyiron_log - WARNING - The job murn_Al_encut_450_kpt_12 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
+2020-04-15 00:27:06,972 - pyiron_log - WARNING - The job murn_Al_encut_250_kpt_16 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
+2020-04-15 00:27:07,637 - pyiron_log - WARNING - The job murn_Al_encut_350_kpt_16 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
+2020-04-15 00:27:08,239 - pyiron_log - WARNING - The job murn_Al_encut_450_kpt_16 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="using-pyiron-tables">
+<h3>Using pyiron tables<a class="headerlink" href="#using-pyiron-tables" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyiron.table.datamining</span> <span class="kn">import</span> <span class="n">PyironTable</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span> <span class="o">=</span> <span class="n">PyironTable</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="s2">&quot;murn_table_dft&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">murn</span><span class="p">[</span><span class="s2">&quot;output/structure/cell/cell&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.056387965013417
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_lattice_parameter</span><span class="p">(</span><span class="n">job</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">job</span><span class="p">[</span><span class="s2">&quot;output/structure/cell/cell&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">get_eq_energy</span><span class="p">(</span><span class="n">job</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">job</span><span class="p">[</span><span class="s2">&quot;output/equilibrium_energy&quot;</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">get_bm</span><span class="p">(</span><span class="n">job</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">job</span><span class="p">[</span><span class="s2">&quot;output/equilibrium_bulk_modulus&quot;</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">get_encut</span><span class="p">(</span><span class="n">job</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">get_encut_kpoints</span><span class="p">(</span><span class="n">job</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">get_kpoints</span><span class="p">(</span><span class="n">job</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">get_encut_kpoints</span><span class="p">(</span><span class="n">job</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">get_cohesive_energy</span><span class="p">(</span><span class="n">job</span><span class="p">):</span>
+    <span class="n">e_bulk</span> <span class="o">=</span> <span class="n">get_eq_energy</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
+    <span class="n">encut_str</span><span class="o">=</span> <span class="n">get_encut</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
+    <span class="n">encut</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">encut_str</span><span class="p">)</span>
+    <span class="n">atom_job_name</span> <span class="o">=</span> <span class="s2">&quot;aj_encut_</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">encut_str</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">job_table</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">atom_job_name</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">status</span><span class="o">==</span><span class="s2">&quot;finished&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">job</span><span class="o">.</span><span class="n">to_list</span><span class="p">():</span>
+        <span class="n">atom_job</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_job</span><span class="p">(</span><span class="n">pr</span><span class="o">.</span><span class="n">job_type</span><span class="o">.</span><span class="n">Sphinx</span><span class="p">,</span> <span class="n">atom_job_name</span><span class="p">)</span>
+        <span class="n">el</span> <span class="o">=</span> <span class="n">job</span><span class="p">[</span><span class="s2">&quot;output/structure/species&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">atom_job</span><span class="o">.</span><span class="n">structure</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_atoms</span><span class="p">(</span><span class="n">el</span><span class="p">,</span> <span class="n">cell</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span> <span class="mi">10</span><span class="p">,</span> <span class="n">scaled_positions</span><span class="o">=</span><span class="p">[[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]])</span>
+        <span class="n">atom_job</span><span class="o">.</span><span class="n">plane_wave_cutoff</span> <span class="o">=</span> <span class="n">encut</span>
+        <span class="c1"># Using only the Gamma point</span>
+        <span class="n">atom_job</span><span class="o">.</span><span class="n">set_kpoints</span><span class="p">(</span><span class="n">mesh</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+        <span class="n">atom_job</span><span class="o">.</span><span class="n">calc_static</span><span class="p">()</span>
+        <span class="n">atom_job</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+    <span class="n">e_atom</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">inspect</span><span class="p">(</span><span class="n">atom_job_name</span><span class="p">)[</span><span class="s2">&quot;output/generic/energy_tot&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">e_bulk</span> <span class="o">-</span> <span class="n">e_atom</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">filter_function</span><span class="p">(</span><span class="n">job</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;finished&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="s2">&quot;murn&quot;</span> <span class="ow">in</span> <span class="n">job</span><span class="o">.</span><span class="n">job_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">filter_function</span> <span class="o">=</span> <span class="n">filter_function</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">add</span><span class="p">[</span><span class="s2">&quot;a_eq&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_lattice_parameter</span>
+<span class="n">pt</span><span class="o">.</span><span class="n">add</span><span class="p">[</span><span class="s2">&quot;bulk_modulus&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_bm</span>
+<span class="n">pt</span><span class="o">.</span><span class="n">add</span><span class="p">[</span><span class="s2">&quot;encut&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_encut</span>
+<span class="n">pt</span><span class="o">.</span><span class="n">add</span><span class="p">[</span><span class="s2">&quot;kpoints&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_kpoints</span>
+<span class="n">pt</span><span class="o">.</span><span class="n">add</span><span class="p">[</span><span class="s2">&quot;e_coh&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_cohesive_energy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">convert_to_object</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">create_table</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 12/12 [00:00&lt;00:00, 23.70it/s]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">get_dataframe</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;col_0&quot;</span><span class="p">,</span> <span class="s2">&quot;col_1&quot;</span><span class="p">,</span> <span class="s2">&quot;col_2&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>job_id</th>
+      <th>a_eq</th>
+      <th>bulk_modulus</th>
+      <th>encut</th>
+      <th>kpoints</th>
+      <th>e_coh</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>710</td>
+      <td>4.064954</td>
+      <td>79.255168</td>
+      <td>250</td>
+      <td>[4, 4, 4]</td>
+      <td>-3.150580</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>720</td>
+      <td>4.060305</td>
+      <td>80.455058</td>
+      <td>350</td>
+      <td>[4, 4, 4]</td>
+      <td>-3.159693</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>730</td>
+      <td>4.059577</td>
+      <td>79.963251</td>
+      <td>450</td>
+      <td>[4, 4, 4]</td>
+      <td>-3.162153</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>740</td>
+      <td>4.060430</td>
+      <td>77.003914</td>
+      <td>250</td>
+      <td>[8, 8, 8]</td>
+      <td>-3.176323</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>750</td>
+      <td>4.055563</td>
+      <td>78.123729</td>
+      <td>350</td>
+      <td>[8, 8, 8]</td>
+      <td>-3.185486</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>760</td>
+      <td>4.054754</td>
+      <td>77.673591</td>
+      <td>450</td>
+      <td>[8, 8, 8]</td>
+      <td>-3.187986</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>770</td>
+      <td>4.061995</td>
+      <td>77.308758</td>
+      <td>250</td>
+      <td>[12, 12, 12]</td>
+      <td>-3.174546</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>780</td>
+      <td>4.057107</td>
+      <td>78.470600</td>
+      <td>350</td>
+      <td>[12, 12, 12]</td>
+      <td>-3.183693</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>790</td>
+      <td>4.056346</td>
+      <td>78.002314</td>
+      <td>450</td>
+      <td>[12, 12, 12]</td>
+      <td>-3.186178</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>800</td>
+      <td>4.062140</td>
+      <td>77.312216</td>
+      <td>250</td>
+      <td>[16, 16, 16]</td>
+      <td>-3.174640</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>810</td>
+      <td>4.057145</td>
+      <td>78.524740</td>
+      <td>350</td>
+      <td>[16, 16, 16]</td>
+      <td>-3.183790</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>820</td>
+      <td>4.056388</td>
+      <td>78.042353</td>
+      <td>450</td>
+      <td>[16, 16, 16]</td>
+      <td>-3.186272</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tutorials"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="sol_2_pyiron_tables.html" title="previous page">Exercise 2: Working with pyiron tables analyze data</a>
+    <a class='right-next' id="next-link" href="sol_4_bandstructure.html" title="next page">Exercise 4: Band structure calculations</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Sudarsan Surendralal<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>
