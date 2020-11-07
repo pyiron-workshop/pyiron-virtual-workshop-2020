@@ -4,15 +4,8 @@ dependencies:
 - python
 - pyiron
 - lammps
-- gpaw
-- sphinxdft=2.6.1=h6ced99e_5
+- sphinxdft
 - nglview
 - seaborn
-- ovito
-- pyscal
-- yaff
-- quickff
-- tamkin
-- molmod
 - seekpath
-- jupyterlab=1.1.4
+- jupyterlab
