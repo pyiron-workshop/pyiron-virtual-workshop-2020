@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <title>Exercise 2: Working with pyiron tables analyze data &#8212; Pyiron Virtual Workshop 2020</title>
     
-  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
     
   <link rel="stylesheet"
@@ -24,7 +24,7 @@
     href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -191,7 +191,8 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -208,11 +209,6 @@
                     alt="Interact on binder">Binder</button></a>
         
         
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/pyiron/pyiron-virtual-workshop-2020/blob/master/book/tutorials/sol_2_pyiron_tables.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
         
         
     </div>
@@ -438,40 +434,40 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 0/28 [00:00&lt;?, ?it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 0/27 [00:00&lt;?, ?it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 28/28 [00:00&lt;00:00, 1176.82it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 27/27 [00:00&lt;00:00, 658.10it/s]
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 0/2 [00:00&lt;?, ?it/s]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job rj_Al_Mg_Mendelev_eam_s_4 was saved and received the ID: 54
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job rj_Al_Mg_Mendelev_eam_s_4 was saved and received the ID: 53
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job dj_Al_Mg_Mendelev_eam_s_4 was saved and received the ID: 55
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job dj_Al_Mg_Mendelev_eam_s_4 was saved and received the ID: 54
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job aj_Al_Mg_Mendelev_eam_s_4 was saved and received the ID: 56
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job aj_Al_Mg_Mendelev_eam_s_4 was saved and received the ID: 55
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 50%|█████     | 1/2 [00:02&lt;00:02,  2.76s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 50%|█████     | 1/2 [00:03&lt;00:03,  3.48s/it]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job rj_Zope_Ti_Al_2003_eam_s_4 was saved and received the ID: 57
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job rj_Zope_Ti_Al_2003_eam_s_4 was saved and received the ID: 56
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job dj_Zope_Ti_Al_2003_eam_s_4 was saved and received the ID: 58
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job dj_Zope_Ti_Al_2003_eam_s_4 was saved and received the ID: 57
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job aj_Zope_Ti_Al_2003_eam_s_4 was saved and received the ID: 59
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job aj_Zope_Ti_Al_2003_eam_s_4 was saved and received the ID: 58
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 2/2 [00:05&lt;00:00,  2.89s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 2/2 [00:06&lt;00:00,  3.37s/it]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 2/2 [00:05&lt;00:00,  2.97s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 2/2 [00:06&lt;00:00,  3.29s/it]
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -611,7 +607,7 @@
     </div>
 
     
-  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
     

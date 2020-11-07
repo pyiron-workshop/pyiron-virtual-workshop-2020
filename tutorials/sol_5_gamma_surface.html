@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <title>Exercise 5: Development of our own mudule for Gamma surface calculations &#8212; Pyiron Virtual Workshop 2020</title>
     
-  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
     
   <link rel="stylesheet"
@@ -24,7 +24,7 @@
     href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -190,7 +190,8 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -207,11 +208,6 @@
                     alt="Interact on binder">Binder</button></a>
         
         
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/pyiron/pyiron-virtual-workshop-2020/blob/master/book/tutorials/sol_5_gamma_surface.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
         
         
     </div>
@@ -349,124 +345,97 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_0_0 was saved and received the ID: 60
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_0_0 was saved and received the ID: 59
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_0_2756 was saved and received the ID: 61
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_0_2756 was saved and received the ID: 60
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_0_5511 was saved and received the ID: 62
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_0_5511 was saved and received the ID: 61
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_0_8267 was saved and received the ID: 63
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_0_8267 was saved and received the ID: 62
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_1_102 was saved and received the ID: 64
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_1_102 was saved and received the ID: 63
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_1_378 was saved and received the ID: 65
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_1_378 was saved and received the ID: 64
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_1_653 was saved and received the ID: 66
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_1_653 was saved and received the ID: 65
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_1_929 was saved and received the ID: 67
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_1_929 was saved and received the ID: 66
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_2_205 was saved and received the ID: 68
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_2_205 was saved and received the ID: 67
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_2_48 was saved and received the ID: 69
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_2_48 was saved and received the ID: 68
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_2_756 was saved and received the ID: 70
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_2_756 was saved and received the ID: 69
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_3_031 was saved and received the ID: 71
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_3_031 was saved and received the ID: 70
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_3_307 was saved and received the ID: 72
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_3_307 was saved and received the ID: 71
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_3_582 was saved and received the ID: 73
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_3_582 was saved and received the ID: 72
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_3_858 was saved and received the ID: 74
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_3_858 was saved and received the ID: 73
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_4_134 was saved and received the ID: 75
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_4_134 was saved and received the ID: 74
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_4_409 was saved and received the ID: 76
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_4_409 was saved and received the ID: 75
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_4_685 was saved and received the ID: 77
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_4_685 was saved and received the ID: 76
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_4_96 was saved and received the ID: 78
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_0_y_4_96 was saved and received the ID: 77
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_0_0 was saved and received the ID: 79
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_0_0 was saved and received the ID: 78
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_0_2756 was saved and received the ID: 80
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_0_2756 was saved and received the ID: 79
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_0_5511 was saved and received the ID: 81
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_0_5511 was saved and received the ID: 80
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_0_8267 was saved and received the ID: 82
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_0_8267 was saved and received the ID: 81
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_1_102 was saved and received the ID: 83
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_1_102 was saved and received the ID: 82
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_1_378 was saved and received the ID: 84
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_1_378 was saved and received the ID: 83
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_1_653 was saved and received the ID: 85
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_1_653 was saved and received the ID: 84
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_1_929 was saved and received the ID: 86
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_1_929 was saved and received the ID: 85
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_2_205 was saved and received the ID: 87
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_2_205 was saved and received the ID: 86
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_2_48 was saved and received the ID: 88
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_2_48 was saved and received the ID: 87
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_2_756 was saved and received the ID: 89
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_2_756 was saved and received the ID: 88
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_3_031 was saved and received the ID: 90
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_3_307 was saved and received the ID: 91
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_3_582 was saved and received the ID: 92
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_3_858 was saved and received the ID: 93
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_4_134 was saved and received the ID: 94
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_4_409 was saved and received the ID: 95
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_4_685 was saved and received the ID: 96
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_4_96 was saved and received the ID: 97
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_1_432_y_0_0 was saved and received the ID: 98
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_1_432_y_0_2756 was saved and received the ID: 99
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job x_0_7159_y_3_031 was saved and received the ID: 89
 </pre></div>
 </div>
 </div>
@@ -521,7 +490,7 @@
     </div>
 
     
-  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
     
