@@ -17,30 +17,91 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-pr = Project("demo/sphinx_demo")
-pr.remove_jobs()
+job_sphinx.run()
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
-[0;32m<ipython-input-3-914ab94a0009>[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m [0mpr[0m [0;34m=[0m [0mProject[0m[0;34m([0m[0;34m"demo/sphinx_demo"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 2[0;31m [0mpr[0m[0;34m.[0m[0mremove_jobs[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;31mAssertionError[0m                            Traceback (most recent call last)
+[0;32m<ipython-input-12-da3de2a75f2e>[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0mjob_sphinx[0m[0;34m.[0m[0mrun[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
-[0;32m/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/project/generic.py[0m in [0;36mremove_jobs[0;34m(self, recursive)[0m
-[1;32m    964[0m         [0;32mwhile[0m [0mconfirmed[0m [0;32mnot[0m [0;32min[0m [0;34m[[0m[0;34m"y"[0m[0;34m,[0m [0;34m"n"[0m[0;34m][0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    965[0m             [0;32mif[0m [0mconfirmed[0m [0;32mis[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 966[0;31m                 confirmed = input(
-[0m[1;32m    967[0m                     [0;34m"Are you sure you want to delete all jobs from "[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    968[0m                     [0;34m+[0m [0;34mf"'{self.base_name}'? y/(n)"[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py[0m in [0;36mrun[0;34m(self, delete_existing_job, repair, debug, run_mode, run_again)[0m
+[1;32m    681[0m                 [0mstatus[0m [0;34m=[0m [0;34m"created"[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    682[0m             [0;32mif[0m [0mstatus[0m [0;34m==[0m [0;34m"initialized"[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 683[0;31m                 [0mself[0m[0;34m.[0m[0m_run_if_new[0m[0;34m([0m[0mdebug[0m[0;34m=[0m[0mdebug[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    684[0m             [0;32melif[0m [0mstatus[0m [0;34m==[0m [0;34m"created"[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    685[0m                 [0mque_id[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_run_if_created[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/usr/share/miniconda/lib/python3.8/site-packages/ipykernel/kernelbase.py[0m in [0;36mraw_input[0;34m(self, prompt)[0m
-[1;32m    855[0m         """
-[1;32m    856[0m         [0;32mif[0m [0;32mnot[0m [0mself[0m[0;34m.[0m[0m_allow_stdin[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 857[0;31m             raise StdinNotImplementedError(
-[0m[1;32m    858[0m                 [0;34m"raw_input was called, but this frontend does not support input requests."[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    859[0m             )
+[0;32m/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py[0m in [0;36m_run_if_new[0;34m(self, debug)[0m
+[1;32m   1391[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1392[0m             [0mself[0m[0;34m.[0m[0msave[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1393[0;31m             [0mself[0m[0;34m.[0m[0mrun[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1394[0m [0;34m[0m[0m
+[1;32m   1395[0m     [0;32mdef[0m [0m_run_if_created[0m[0;34m([0m[0mself[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mStdinNotImplementedError[0m: raw_input was called, but this frontend does not support input requests.
-StdinNotImplementedError: raw_input was called, but this frontend does not support input requests.
+[0;32m/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py[0m in [0;36mrun[0;34m(self, delete_existing_job, repair, debug, run_mode, run_again)[0m
+[1;32m    683[0m                 [0mself[0m[0;34m.[0m[0m_run_if_new[0m[0;34m([0m[0mdebug[0m[0;34m=[0m[0mdebug[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    684[0m             [0;32melif[0m [0mstatus[0m [0;34m==[0m [0;34m"created"[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 685[0;31m                 [0mque_id[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_run_if_created[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    686[0m                 [0;32mif[0m [0mque_id[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    687[0m                     self._logger.info(
+
+[0;32m/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py[0m in [0;36m_run_if_created[0;34m(self)[0m
+[1;32m   1408[0m             [0mself[0m[0;34m.[0m[0mrun_if_manually[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1409[0m         [0;32melif[0m [0mself[0m[0;34m.[0m[0mserver[0m[0;34m.[0m[0mrun_mode[0m[0;34m.[0m[0mmodal[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1410[0;31m             [0mself[0m[0;34m.[0m[0mrun_static[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1411[0m         [0;32melif[0m [0mself[0m[0;34m.[0m[0mserver[0m[0;34m.[0m[0mrun_mode[0m[0;34m.[0m[0mnon_modal[0m [0;32mor[0m [0mself[0m[0;34m.[0m[0mserver[0m[0;34m.[0m[0mrun_mode[0m[0;34m.[0m[0mthread[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1412[0m             [0mself[0m[0;34m.[0m[0mrun_if_non_modal[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py[0m in [0;36mrun_static[0;34m(self)[0m
+[1;32m    785[0m             [0;34m"{}, status: {}, output: {}"[0m[0;34m.[0m[0mformat[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mjob_info_str[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0mstatus[0m[0;34m,[0m [0mout[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    786[0m         )
+[0;32m--> 787[0;31m         [0mself[0m[0;34m.[0m[0mrun[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    788[0m         [0;32mif[0m [0mjob_crashed[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    789[0m             [0mself[0m[0;34m.[0m[0mstatus[0m[0;34m.[0m[0maborted[0m [0;34m=[0m [0;32mTrue[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py[0m in [0;36mrun[0;34m(self, delete_existing_job, repair, debug, run_mode, run_again)[0m
+[1;32m    696[0m                 [0mself[0m[0;34m.[0m[0m_run_if_running[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    697[0m             [0;32melif[0m [0mstatus[0m [0;34m==[0m [0;34m"collect"[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 698[0;31m                 [0mself[0m[0;34m.[0m[0m_run_if_collect[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    699[0m             [0;32melif[0m [0mstatus[0m [0;34m==[0m [0;34m"suspend"[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    700[0m                 [0mself[0m[0;34m.[0m[0m_run_if_suspended[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py[0m in [0;36m_run_if_collect[0;34m(self)[0m
+[1;32m   1482[0m         [0mstatus[0m [0;32mis[0m [0mset[0m [0mto[0m [0;34m'finished'[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1483[0m         """
+[0;32m-> 1484[0;31m         [0mself[0m[0;34m.[0m[0mcollect_output[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1485[0m         [0mself[0m[0;34m.[0m[0mcollect_logfiles[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1486[0m         [0;32mif[0m [0mself[0m[0;34m.[0m[0mjob_id[0m [0;32mis[0m [0;32mnot[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/lib/python3.8/site-packages/pyiron/sphinx/interactive.py[0m in [0;36mcollect_output[0;34m(self, force_update)[0m
+[1;32m    215[0m [0;34m[0m[0m
+[1;32m    216[0m     [0;32mdef[0m [0mcollect_output[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mforce_update[0m[0;34m=[0m[0;32mFalse[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 217[0;31m         [0msuper[0m[0;34m([0m[0mSphinxInteractive[0m[0;34m,[0m [0mself[0m[0;34m)[0m[0;34m.[0m[0mcollect_output[0m[0;34m([0m[0mforce_update[0m[0;34m=[0m[0mforce_update[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    218[0m         [0mself[0m[0;34m.[0m[0m_output_interactive_to_generic[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    219[0m [0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/lib/python3.8/site-packages/pyiron/sphinx/base.py[0m in [0;36mcollect_output[0;34m(self, force_update)[0m
+[1;32m   1396[0m         [0mCollects[0m [0mthe[0m [0moutputs[0m [0;32mand[0m [0mstores[0m [0mthem[0m [0mto[0m [0mthe[0m [0mhdf[0m [0mfile[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1397[0m         """
+[0;32m-> 1398[0;31m         [0mself[0m[0;34m.[0m[0m_output_parser[0m[0;34m.[0m[0mcollect[0m[0;34m([0m[0mdirectory[0m[0;34m=[0m[0mself[0m[0;34m.[0m[0mworking_directory[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1399[0m         [0mself[0m[0;34m.[0m[0m_output_parser[0m[0;34m.[0m[0mto_hdf[0m[0;34m([0m[0mself[0m[0;34m.[0m[0m_hdf5[0m[0;34m,[0m [0mforce_update[0m[0;34m=[0m[0mforce_update[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1400[0m [0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/lib/python3.8/site-packages/pyiron/sphinx/base.py[0m in [0;36mcollect[0;34m(self, directory)[0m
+[1;32m   2347[0m             [0mdirectory[0m [0;34m([0m[0mstr[0m[0;34m)[0m[0;34m:[0m [0mthe[0m [0mdirectory[0m [0mto[0m [0mcollect[0m [0mthe[0m [0moutput[0m [0;32mfrom[0m[0;34m.[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   2348[0m         """
+[0;32m-> 2349[0;31m         [0mself[0m[0;34m.[0m[0mcollect_sphinx_log[0m[0;34m([0m[0mfile_name[0m[0;34m=[0m[0;34m"sphinx.log"[0m[0;34m,[0m [0mcwd[0m[0;34m=[0m[0mdirectory[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   2350[0m         [0mself[0m[0;34m.[0m[0mcollect_energy_dat[0m[0;34m([0m[0mfile_name[0m[0;34m=[0m[0;34m"energy.dat"[0m[0;34m,[0m [0mcwd[0m[0;34m=[0m[0mdirectory[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   2351[0m         [0mself[0m[0;34m.[0m[0mcollect_residue_dat[0m[0;34m([0m[0mfile_name[0m[0;34m=[0m[0;34m"residue.dat"[0m[0;34m,[0m [0mcwd[0m[0;34m=[0m[0mdirectory[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/lib/python3.8/site-packages/pyiron/sphinx/base.py[0m in [0;36mcollect_sphinx_log[0;34m(self, file_name, cwd, check_consistency)[0m
+[1;32m   2088[0m             [0;32mif[0m [0;32mnot[0m [0mnp[0m[0;34m.[0m[0many[0m[0;34m([0m[0;34m[[0m[0;34m"Enter Main Loop"[0m [0;32min[0m [0mline[0m [0;32mfor[0m [0mline[0m [0;32min[0m [0mlog_file[0m[0;34m][0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   2089[0m                 [0mself[0m[0;34m.[0m[0m_job[0m[0;34m.[0m[0mstatus[0m[0;34m.[0m[0maborted[0m [0;34m=[0m [0;32mTrue[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 2090[0;31m                 raise AssertionError("SPHInX did not enter the main loop; \
+[0m[1;32m   2091[0m                     output not collected")
+[1;32m   2092[0m             if not np.any(["Program exited normally." in line
+
+[0;31mAssertionError[0m: SPHInX did not enter the main loop;                     output not collected
+AssertionError: SPHInX did not enter the main loop;                     output not collected
 

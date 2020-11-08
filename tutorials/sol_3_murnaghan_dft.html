@@ -315,32 +315,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span> <span class="o">=</span> <span class="n">Project</span><span class="p">(</span><span class="s2">&quot;demo/sphinx_demo&quot;</span><span class="p">)</span>
-<span class="n">pr</span><span class="o">.</span><span class="n">remove_jobs</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">914</span><span class="n">ab94a0009</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">pr</span> <span class="o">=</span> <span class="n">Project</span><span class="p">(</span><span class="s2">&quot;demo/sphinx_demo&quot;</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">pr</span><span class="o">.</span><span class="n">remove_jobs</span><span class="p">()</span>
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/project/generic.py</span> in <span class="ni">remove_jobs</span><span class="nt">(self, recursive)</span>
-<span class="g g-Whitespace">    </span><span class="mi">964</span>         <span class="k">while</span> <span class="n">confirmed</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">]:</span>
-<span class="g g-Whitespace">    </span><span class="mi">965</span>             <span class="k">if</span> <span class="n">confirmed</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">966</span>                 <span class="n">confirmed</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">967</span>                     <span class="s2">&quot;Are you sure you want to delete all jobs from &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">968</span>                     <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">base_name</span><span class="si">}</span><span class="s2">&#39;? y/(n)&quot;</span>
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">    </span><span class="mi">855</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">856</span><span class="s2">         if not self._allow_stdin:</span>
-<span class="ne">--&gt; </span><span class="mi">857</span><span class="s2">             raise StdinNotImplementedError(</span>
-<span class="g g-Whitespace">    </span><span class="mi">858</span><span class="s2">                 &quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">859</span><span class="s2">             )</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+<span class="c1"># pr.remove_jobs()</span>
 </pre></div>
 </div>
 </div>
@@ -406,135 +381,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Parameter</th>
-      <th>Value</th>
-      <th>Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>EnCut</td>
-      <td>340</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>KpointCoords</td>
-      <td>[0.5, 0.5, 0.5]</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>KpointFolding</td>
-      <td>[5, 5, 5]</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>EmptyStates</td>
-      <td>auto</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Sigma</td>
-      <td>0.1</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Xcorr</td>
-      <td>PBE</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>VaspPot</td>
-      <td>False</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Estep</td>
-      <td>400</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Ediff</td>
-      <td>1.0e-4</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>WriteWaves</td>
-      <td>True</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>KJxc</td>
-      <td>False</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>SaveMemory</td>
-      <td>True</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>CoarseRun</td>
-      <td>False</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>rhoMixing</td>
-      <td>1.0</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>spinMixing</td>
-      <td>1.0</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>CheckOverlap</td>
-      <td>True</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>THREADS</td>
-      <td>1</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Group({&#39;sphinx&#39;: Group({&#39;pawPot&#39;: Group([]), &#39;structure&#39;: Group([]), &#39;basis&#39;: Group({&#39;kPoint&#39;: Group([]), &#39;folding&#39;: array([5, 5, 5])}), &#39;PAWHamiltonian&#39;: Group([]), &#39;initialGuess&#39;: Group([]), &#39;main&#39;: Group([])}), &#39;EnCut&#39;: 340, &#39;KpointCoords&#39;: [0.5, 0.5, 0.5], &#39;KpointFolding&#39;: [5, 5, 5], &#39;EmptyStates&#39;: &#39;auto&#39;, &#39;Sigma&#39;: 0.1, &#39;Xcorr&#39;: &#39;PBE&#39;, &#39;VaspPot&#39;: False, &#39;Estep&#39;: 100, &#39;Ediff&#39;: 0.0001, &#39;WriteWaves&#39;: True, &#39;KJxc&#39;: False, &#39;SaveMemory&#39;: True, &#39;rhoMixing&#39;: 1.0, &#39;spinMixing&#39;: 1.0, &#39;CheckOverlap&#39;: True, &#39;THREADS&#39;: 1})
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -550,7 +400,92 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job test_sphinx was saved and received the ID: 833
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job test_sphinx was saved and received the ID: 61
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="n">da3de2a75f2e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">job_sphinx</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py</span> in <span class="ni">run</span><span class="nt">(self, delete_existing_job, repair, debug, run_mode, run_again)</span>
+<span class="g g-Whitespace">    </span><span class="mi">681</span>                 <span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;created&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">682</span>             <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;initialized&quot;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">683</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_run_if_new</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="n">debug</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">684</span>             <span class="k">elif</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;created&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">685</span>                 <span class="n">que_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_run_if_created</span><span class="p">()</span>
+
+<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py</span> in <span class="ni">_run_if_new</span><span class="nt">(self, debug)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1391</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1392</span>             <span class="bp">self</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">1393</span>             <span class="bp">self</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1394</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1395</span>     <span class="k">def</span> <span class="nf">_run_if_created</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py</span> in <span class="ni">run</span><span class="nt">(self, delete_existing_job, repair, debug, run_mode, run_again)</span>
+<span class="g g-Whitespace">    </span><span class="mi">683</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_run_if_new</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="n">debug</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">684</span>             <span class="k">elif</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;created&quot;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">685</span>                 <span class="n">que_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_run_if_created</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">686</span>                 <span class="k">if</span> <span class="n">que_id</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">687</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+
+<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py</span> in <span class="ni">_run_if_created</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1408</span>             <span class="bp">self</span><span class="o">.</span><span class="n">run_if_manually</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1409</span>         <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">run_mode</span><span class="o">.</span><span class="n">modal</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1410</span>             <span class="bp">self</span><span class="o">.</span><span class="n">run_static</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1411</span>         <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">run_mode</span><span class="o">.</span><span class="n">non_modal</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">run_mode</span><span class="o">.</span><span class="n">thread</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1412</span>             <span class="bp">self</span><span class="o">.</span><span class="n">run_if_non_modal</span><span class="p">()</span>
+
+<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py</span> in <span class="ni">run_static</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">785</span>             <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">, status: </span><span class="si">{}</span><span class="s2">, output: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">job_info_str</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="p">,</span> <span class="n">out</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">786</span>         <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">787</span>         <span class="bp">self</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">788</span>         <span class="k">if</span> <span class="n">job_crashed</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">789</span>             <span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">aborted</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py</span> in <span class="ni">run</span><span class="nt">(self, delete_existing_job, repair, debug, run_mode, run_again)</span>
+<span class="g g-Whitespace">    </span><span class="mi">696</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_run_if_running</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">697</span>             <span class="k">elif</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;collect&quot;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">698</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_run_if_collect</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">699</span>             <span class="k">elif</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;suspend&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">700</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_run_if_suspended</span><span class="p">()</span>
+
+<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py</span> in <span class="ni">_run_if_collect</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1482</span>         <span class="n">status</span> <span class="ow">is</span> <span class="nb">set</span> <span class="n">to</span> <span class="s1">&#39;finished&#39;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1483</span>         <span class="sd">&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1484</span><span class="sd">         self.collect_output()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1485</span><span class="sd">         self.collect_logfiles()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1486</span><span class="sd">         if self.job_id is not None:</span>
+
+<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron/sphinx/interactive.py</span> in <span class="ni">collect_output</span><span class="nt">(self, force_update)</span>
+<span class="g g-Whitespace">    </span><span class="mi">215</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">216</span><span class="sd">     def collect_output(self, force_update=False):</span>
+<span class="ne">--&gt; </span><span class="mi">217</span><span class="sd">         super(SphinxInteractive, self).collect_output(force_update=force_update)</span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span><span class="sd">         self._output_interactive_to_generic()</span>
+<span class="g g-Whitespace">    </span><span class="mi">219</span><span class="sd"> </span>
+
+<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron/sphinx/base.py</span> in <span class="ni">collect_output</span><span class="nt">(self, force_update)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1396</span><span class="sd">         Collects the outputs and stores them to the hdf file</span>
+<span class="g g-Whitespace">   </span><span class="mi">1397</span><span class="sd">         &quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1398</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_output_parser</span><span class="o">.</span><span class="n">collect</span><span class="p">(</span><span class="n">directory</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">working_directory</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1399</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_output_parser</span><span class="o">.</span><span class="n">to_hdf</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_hdf5</span><span class="p">,</span> <span class="n">force_update</span><span class="o">=</span><span class="n">force_update</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1400</span> 
+
+<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron/sphinx/base.py</span> in <span class="ni">collect</span><span class="nt">(self, directory)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2347</span>             <span class="n">directory</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">directory</span> <span class="n">to</span> <span class="n">collect</span> <span class="n">the</span> <span class="n">output</span> <span class="n">from</span><span class="o">.</span>
+<span class="g g-Whitespace">   </span><span class="mi">2348</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">2349</span><span class="s2">         self.collect_sphinx_log(file_name=&quot;sphinx.log&quot;, cwd=directory)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2350</span><span class="s2">         self.collect_energy_dat(file_name=&quot;energy.dat&quot;, cwd=directory)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2351</span><span class="s2">         self.collect_residue_dat(file_name=&quot;residue.dat&quot;, cwd=directory)</span>
+
+<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron/sphinx/base.py</span> in <span class="ni">collect_sphinx_log</span><span class="nt">(self, file_name, cwd, check_consistency)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2088</span><span class="s2">             if not np.any([&quot;Enter Main Loop&quot; in line for line in log_file]):</span>
+<span class="g g-Whitespace">   </span><span class="mi">2089</span><span class="s2">                 self._job.status.aborted = True</span>
+<span class="ne">-&gt; </span><span class="mi">2090</span><span class="s2">                 raise AssertionError(&quot;SPHInX did not enter the main loop; </span><span class="se">\</span>
+<span class="g g-Whitespace">   </span><span class="mi">2091</span><span class="s2">                     output not collected&quot;)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2092</span><span class="s2">             if not np.any([&quot;Program exited normally.&quot; in line</span>
+
+<span class="ne">AssertionError</span>: SPHInX did not enter the main loop;                     output not collected
 </pre></div>
 </div>
 </div>
@@ -635,7 +570,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-57.21641920181957
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-57.19954510906662
 </pre></div>
 </div>
 </div>
@@ -647,7 +582,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span> <span class="o">=</span> <span class="n">Project</span><span class="p">(</span><span class="s2">&quot;demo/murnaghan_Al_dft&quot;</span><span class="p">)</span>
-<span class="n">pr</span><span class="o">.</span><span class="n">remove_jobs</span><span class="p">()</span>
+<span class="c1"># pr.remove_jobs()</span>
 </pre></div>
 </div>
 </div>
@@ -679,17 +614,17 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>job_name_a_3_9_encut_350_kpt_12
-The job job_name_a_3_9_encut_350_kpt_12 was saved and received the ID: 834
+The job job_name_a_3_9_encut_350_kpt_12 was saved and received the ID: 201
 job_name_a_3_96_encut_350_kpt_12
-The job job_name_a_3_96_encut_350_kpt_12 was saved and received the ID: 835
+The job job_name_a_3_96_encut_350_kpt_12 was saved and received the ID: 210
 job_name_a_4_02_encut_350_kpt_12
-The job job_name_a_4_02_encut_350_kpt_12 was saved and received the ID: 836
+The job job_name_a_4_02_encut_350_kpt_12 was saved and received the ID: 220
 job_name_a_4_08_encut_350_kpt_12
-The job job_name_a_4_08_encut_350_kpt_12 was saved and received the ID: 837
+The job job_name_a_4_08_encut_350_kpt_12 was saved and received the ID: 228
 job_name_a_4_14_encut_350_kpt_12
-The job job_name_a_4_14_encut_350_kpt_12 was saved and received the ID: 838
+The job job_name_a_4_14_encut_350_kpt_12 was saved and received the ID: 238
 job_name_a_4_2_encut_350_kpt_12
-The job job_name_a_4_2_encut_350_kpt_12 was saved and received the ID: 839
+The job job_name_a_4_2_encut_350_kpt_12 was saved and received the ID: 247
 </pre></div>
 </div>
 </div>
@@ -753,7 +688,7 @@ The job job_name_a_4_2_encut_350_kpt_12 was saved and received the ID: 839
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-57.23284122857466
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-57.20282223568748
 </pre></div>
 </div>
 </div>
@@ -808,8 +743,8 @@ The job job_name_a_4_2_encut_350_kpt_12 was saved and received the ID: 839
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 93.8 ms, sys: 31.2 ms, total: 125 ms
-Wall time: 102 ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 79.2 ms, sys: 11.5 ms, total: 90.6 ms
+Wall time: 211 ms
 </pre></div>
 </div>
 </div>
@@ -856,8 +791,8 @@ Wall time: 102 ms
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 188 ms, sys: 15.6 ms, total: 203 ms
-Wall time: 209 ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 128 ms, sys: 7.98 ms, total: 136 ms
+Wall time: 367 ms
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -889,7 +824,7 @@ Wall time: 209 ms
     <tr>
       <th>0</th>
       <td>3.90</td>
-      <td>-57.209575</td>
+      <td>-57.184040</td>
       <td>350</td>
       <td>[12, 12, 12]</td>
       <td>4</td>
@@ -897,7 +832,7 @@ Wall time: 209 ms
     <tr>
       <th>1</th>
       <td>3.96</td>
-      <td>-57.249233</td>
+      <td>-57.222944</td>
       <td>350</td>
       <td>[12, 12, 12]</td>
       <td>4</td>
@@ -905,7 +840,7 @@ Wall time: 209 ms
     <tr>
       <th>2</th>
       <td>4.02</td>
-      <td>-57.268643</td>
+      <td>-57.241557</td>
       <td>350</td>
       <td>[12, 12, 12]</td>
       <td>3</td>
@@ -913,7 +848,7 @@ Wall time: 209 ms
     <tr>
       <th>3</th>
       <td>4.08</td>
-      <td>-57.270688</td>
+      <td>-57.242664</td>
       <td>350</td>
       <td>[12, 12, 12]</td>
       <td>4</td>
@@ -921,7 +856,7 @@ Wall time: 209 ms
     <tr>
       <th>4</th>
       <td>4.14</td>
-      <td>-57.257964</td>
+      <td>-57.228889</td>
       <td>350</td>
       <td>[12, 12, 12]</td>
       <td>4</td>
@@ -929,7 +864,7 @@ Wall time: 209 ms
     <tr>
       <th>5</th>
       <td>4.20</td>
-      <td>-57.232841</td>
+      <td>-57.202822</td>
       <td>350</td>
       <td>[12, 12, 12]</td>
       <td>4</td>
@@ -973,18 +908,232 @@ Wall time: 209 ms
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2020-04-15 00:26:59,380 - pyiron_log - WARNING - The job murn_Al_encut_250_kpt_4 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
-2020-04-15 00:26:59,893 - pyiron_log - WARNING - The job murn_Al_encut_350_kpt_4 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
-2020-04-15 00:27:01,032 - pyiron_log - WARNING - The job murn_Al_encut_450_kpt_4 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
-2020-04-15 00:27:02,324 - pyiron_log - WARNING - The job murn_Al_encut_250_kpt_8 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
-2020-04-15 00:27:03,683 - pyiron_log - WARNING - The job murn_Al_encut_350_kpt_8 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
-2020-04-15 00:27:04,407 - pyiron_log - WARNING - The job murn_Al_encut_450_kpt_8 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
-2020-04-15 00:27:05,050 - pyiron_log - WARNING - The job murn_Al_encut_250_kpt_12 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
-2020-04-15 00:27:05,634 - pyiron_log - WARNING - The job murn_Al_encut_350_kpt_12 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
-2020-04-15 00:27:06,227 - pyiron_log - WARNING - The job murn_Al_encut_450_kpt_12 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
-2020-04-15 00:27:06,972 - pyiron_log - WARNING - The job murn_Al_encut_250_kpt_16 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
-2020-04-15 00:27:07,637 - pyiron_log - WARNING - The job murn_Al_encut_350_kpt_16 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
-2020-04-15 00:27:08,239 - pyiron_log - WARNING - The job murn_Al_encut_450_kpt_16 is being loaded instead of running. To re-run use the argument &#39;run_again=True&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job murn_Al_encut_250_kpt_4 was saved and received the ID: 255
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_9 was saved and received the ID: 256
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_925 was saved and received the ID: 260
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_95 was saved and received the ID: 263
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_975 was saved and received the ID: 266
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_0 was saved and received the ID: 271
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_025 was saved and received the ID: 274
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_05 was saved and received the ID: 278
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_075 was saved and received the ID: 281
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_1 was saved and received the ID: 284
+job_id:  256 finished
+job_id:  260 finished
+job_id:  263 finished
+job_id:  266 finished
+job_id:  271 finished
+job_id:  274 finished
+job_id:  278 finished
+job_id:  281 finished
+job_id:  284 finished
+The job murn_Al_encut_350_kpt_4 was saved and received the ID: 288
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_9 was saved and received the ID: 290
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_925 was saved and received the ID: 293
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_95 was saved and received the ID: 297
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_975 was saved and received the ID: 301
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_0 was saved and received the ID: 305
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_025 was saved and received the ID: 308
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_05 was saved and received the ID: 311
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_075 was saved and received the ID: 315
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_1 was saved and received the ID: 318
+job_id:  290 finished
+job_id:  293 finished
+job_id:  297 finished
+job_id:  301 finished
+job_id:  305 finished
+job_id:  308 finished
+job_id:  311 finished
+job_id:  315 finished
+job_id:  318 finished
+The job murn_Al_encut_450_kpt_4 was saved and received the ID: 322
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_9 was saved and received the ID: 323
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job strain_0_925 was saved and received the ID: 326
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_95 was saved and received the ID: 329
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_975 was saved and received the ID: 332
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_0 was saved and received the ID: 335
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_025 was saved and received the ID: 337
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_05 was saved and received the ID: 341
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_075 was saved and received the ID: 345
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_1 was saved and received the ID: 349
+job_id:  323 finished
+job_id:  326 finished
+job_id:  329 finished
+job_id:  332 finished
+job_id:  335 finished
+job_id:  337 finished
+job_id:  341 finished
+job_id:  345 finished
+job_id:  349 finished
+The job murn_Al_encut_250_kpt_12 was saved and received the ID: 352
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_9 was saved and received the ID: 354
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_925 was saved and received the ID: 360
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_95 was saved and received the ID: 365
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_975 was saved and received the ID: 370
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_0 was saved and received the ID: 371
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_025 was saved and received the ID: 372
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_05 was saved and received the ID: 373
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_075 was saved and received the ID: 374
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_1 was saved and received the ID: 375
+job_id:  354 finished
+job_id:  360 finished
+job_id:  365 finished
+job_id:  370 finished
+job_id:  371 finished
+job_id:  372 finished
+job_id:  373 finished
+job_id:  374 finished
+job_id:  375 finished
+The job murn_Al_encut_350_kpt_12 was saved and received the ID: 376
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_9 was saved and received the ID: 377
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_925 was saved and received the ID: 378
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_95 was saved and received the ID: 379
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_975 was saved and received the ID: 380
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_0 was saved and received the ID: 381
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_025 was saved and received the ID: 382
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_05 was saved and received the ID: 383
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_075 was saved and received the ID: 384
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_1 was saved and received the ID: 385
+job_id:  377 finished
+job_id:  378 finished
+job_id:  379 finished
+job_id:  380 finished
+job_id:  381 finished
+job_id:  382 finished
+job_id:  383 finished
+job_id:  384 finished
+job_id:  385 finished
+The job murn_Al_encut_450_kpt_12 was saved and received the ID: 386
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_9 was saved and received the ID: 387
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_925 was saved and received the ID: 388
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_95 was saved and received the ID: 389
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_0_975 was saved and received the ID: 390
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_0 was saved and received the ID: 391
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_025 was saved and received the ID: 392
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_05 was saved and received the ID: 393
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_075 was saved and received the ID: 394
+WARNING:
+job.input.structure != job.structure. The current job.structure will overwrite any changes you may might have made to job.input.structure in the meantime. To disable this overwrite, set job.input.structure.read_only = True. To disable this warning, call job.load_structure_group() after making changes to job.structure.
+The job strain_1_1 was saved and received the ID: 395
+job_id:  387 finished
+job_id:  388 finished
+job_id:  389 finished
+job_id:  390 finished
+job_id:  391 finished
+job_id:  392 finished
+job_id:  393 finished
+job_id:  394 finished
+job_id:  395 finished
 </pre></div>
 </div>
 </div>
@@ -1012,7 +1161,7 @@ Wall time: 209 ms
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.056387965013417
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.052850088952362
 </pre></div>
 </div>
 </div>
@@ -1095,7 +1244,26 @@ Wall time: 209 ms
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 12/12 [00:00&lt;00:00, 23.70it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 60/60 [00:00&lt;00:00, 1133.62it/s]
+  0%|          | 0/6 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job aj_encut_250 was saved and received the ID: 396
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 17%|█▋        | 1/6 [00:12&lt;01:01, 12.32s/it]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job aj_encut_350 was saved and received the ID: 397
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 33%|███▎      | 2/6 [00:30&lt;00:55, 13.98s/it]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job aj_encut_450 was saved and received the ID: 398
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 6/6 [00:53&lt;00:00,  8.96s/it]
 </pre></div>
 </div>
 </div>
@@ -1143,111 +1311,57 @@ Wall time: 209 ms
   <tbody>
     <tr>
       <th>0</th>
-      <td>710</td>
-      <td>4.064954</td>
-      <td>79.255168</td>
+      <td>255</td>
+      <td>4.062126</td>
+      <td>81.203234</td>
       <td>250</td>
       <td>[4, 4, 4]</td>
-      <td>-3.150580</td>
+      <td>-3.612128</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>720</td>
-      <td>4.060305</td>
-      <td>80.455058</td>
+      <td>288</td>
+      <td>4.057718</td>
+      <td>82.415304</td>
       <td>350</td>
       <td>[4, 4, 4]</td>
-      <td>-3.159693</td>
+      <td>-3.621299</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>730</td>
-      <td>4.059577</td>
-      <td>79.963251</td>
+      <td>322</td>
+      <td>4.056997</td>
+      <td>81.890404</td>
       <td>450</td>
       <td>[4, 4, 4]</td>
-      <td>-3.162153</td>
+      <td>-3.623744</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>740</td>
-      <td>4.060430</td>
-      <td>77.003914</td>
+      <td>352</td>
+      <td>4.058432</td>
+      <td>78.725017</td>
       <td>250</td>
-      <td>[8, 8, 8]</td>
-      <td>-3.176323</td>
+      <td>[12, 12, 12]</td>
+      <td>-3.667680</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>750</td>
-      <td>4.055563</td>
-      <td>78.123729</td>
+      <td>376</td>
+      <td>4.053631</td>
+      <td>79.844466</td>
       <td>350</td>
-      <td>[8, 8, 8]</td>
-      <td>-3.185486</td>
+      <td>[12, 12, 12]</td>
+      <td>-3.676872</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>760</td>
-      <td>4.054754</td>
-      <td>77.673591</td>
-      <td>450</td>
-      <td>[8, 8, 8]</td>
-      <td>-3.187986</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>770</td>
-      <td>4.061995</td>
-      <td>77.308758</td>
-      <td>250</td>
-      <td>[12, 12, 12]</td>
-      <td>-3.174546</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>780</td>
-      <td>4.057107</td>
-      <td>78.470600</td>
-      <td>350</td>
-      <td>[12, 12, 12]</td>
-      <td>-3.183693</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>790</td>
-      <td>4.056346</td>
-      <td>78.002314</td>
+      <td>386</td>
+      <td>4.052850</td>
+      <td>79.383996</td>
       <td>450</td>
       <td>[12, 12, 12]</td>
-      <td>-3.186178</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>800</td>
-      <td>4.062140</td>
-      <td>77.312216</td>
-      <td>250</td>
-      <td>[16, 16, 16]</td>
-      <td>-3.174640</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>810</td>
-      <td>4.057145</td>
-      <td>78.524740</td>
-      <td>350</td>
-      <td>[16, 16, 16]</td>
-      <td>-3.183790</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>820</td>
-      <td>4.056388</td>
-      <td>78.042353</td>
-      <td>450</td>
-      <td>[16, 16, 16]</td>
-      <td>-3.186272</td>
+      <td>-3.679358</td>
     </tr>
   </tbody>
 </table>
