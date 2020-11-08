@@ -360,9 +360,9 @@
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "83e538eb89f5413aa69b8970a78371d7"}
+{"version_major": 2, "version_minor": 0, "model_id": "9f4f837d4aef4d04947a95bb35901419"}
 </script><script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "7a1eef0ab00e4aa0864c111263130014"}
+{"version_major": 2, "version_minor": 0, "model_id": "2e77da1e4dbd42fa925e14cb692e519f"}
 </script></div>
 </div>
 <div class="cell docutils container">
@@ -431,9 +431,7 @@ as input structure.</p></li>
         [ 1.405,  1.405, -1.405]]),
  &#39;primitive_positions&#39;: array([[0., 0., 0.]]),
  &#39;primitive_types&#39;: array([0], dtype=int32),
- &#39;reciprocal_primitive_lattice&#39;: [[1.6776982741209693e-16,
-   2.236009006113732,
-   2.236009006113732],
+ &#39;reciprocal_primitive_lattice&#39;: [[-0.0, 2.236009006113732, 2.236009006113732],
   [2.236009006113732, 0.0, 2.236009006113732],
   [2.236009006113732, 2.236009006113732, 0.0]],
  &#39;inverse_primitive_transformation_matrix&#39;: array([[0, 1, 1],
@@ -475,7 +473,7 @@ as input structure.</p></li>
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "03684a6d14c64cf9a667421eb4b85ddf"}
+{"version_major": 2, "version_minor": 0, "model_id": "f556a13319ad4ce2ace80e9ad3bb2db0"}
 </script></div>
 </div>
 <div class="cell docutils container">
@@ -605,92 +603,7 @@ Cell([[-1.405, 1.405, 1.405], [1.405, -1.405, 1.405], [1.405, 1.405, -1.405]])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job Fe_spx_CHG was saved and received the ID: 62
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">18</span><span class="o">-</span><span class="mi">694314</span><span class="n">fe4b23</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ham_spx_chg</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py</span> in <span class="ni">run</span><span class="nt">(self, delete_existing_job, repair, debug, run_mode, run_again)</span>
-<span class="g g-Whitespace">    </span><span class="mi">681</span>                 <span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;created&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">682</span>             <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;initialized&quot;</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">683</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_run_if_new</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="n">debug</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">684</span>             <span class="k">elif</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;created&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">685</span>                 <span class="n">que_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_run_if_created</span><span class="p">()</span>
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py</span> in <span class="ni">_run_if_new</span><span class="nt">(self, debug)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1391</span>         <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1392</span>             <span class="bp">self</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
-<span class="ne">-&gt; </span><span class="mi">1393</span>             <span class="bp">self</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1394</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1395</span>     <span class="k">def</span> <span class="nf">_run_if_created</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py</span> in <span class="ni">run</span><span class="nt">(self, delete_existing_job, repair, debug, run_mode, run_again)</span>
-<span class="g g-Whitespace">    </span><span class="mi">683</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_run_if_new</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="n">debug</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">684</span>             <span class="k">elif</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;created&quot;</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">685</span>                 <span class="n">que_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_run_if_created</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">686</span>                 <span class="k">if</span> <span class="n">que_id</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">687</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py</span> in <span class="ni">_run_if_created</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1408</span>             <span class="bp">self</span><span class="o">.</span><span class="n">run_if_manually</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1409</span>         <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">run_mode</span><span class="o">.</span><span class="n">modal</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1410</span>             <span class="bp">self</span><span class="o">.</span><span class="n">run_static</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1411</span>         <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">run_mode</span><span class="o">.</span><span class="n">non_modal</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">run_mode</span><span class="o">.</span><span class="n">thread</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1412</span>             <span class="bp">self</span><span class="o">.</span><span class="n">run_if_non_modal</span><span class="p">()</span>
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py</span> in <span class="ni">run_static</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">785</span>             <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">, status: </span><span class="si">{}</span><span class="s2">, output: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">job_info_str</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="p">,</span> <span class="n">out</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">786</span>         <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">787</span>         <span class="bp">self</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">788</span>         <span class="k">if</span> <span class="n">job_crashed</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">789</span>             <span class="bp">self</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">aborted</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py</span> in <span class="ni">run</span><span class="nt">(self, delete_existing_job, repair, debug, run_mode, run_again)</span>
-<span class="g g-Whitespace">    </span><span class="mi">696</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_run_if_running</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">697</span>             <span class="k">elif</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;collect&quot;</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">698</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_run_if_collect</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">699</span>             <span class="k">elif</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;suspend&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">700</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_run_if_suspended</span><span class="p">()</span>
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/job/generic.py</span> in <span class="ni">_run_if_collect</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1482</span>         <span class="n">status</span> <span class="ow">is</span> <span class="nb">set</span> <span class="n">to</span> <span class="s1">&#39;finished&#39;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1483</span>         <span class="sd">&quot;&quot;&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1484</span><span class="sd">         self.collect_output()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1485</span><span class="sd">         self.collect_logfiles()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1486</span><span class="sd">         if self.job_id is not None:</span>
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron/sphinx/interactive.py</span> in <span class="ni">collect_output</span><span class="nt">(self, force_update)</span>
-<span class="g g-Whitespace">    </span><span class="mi">215</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">216</span><span class="sd">     def collect_output(self, force_update=False):</span>
-<span class="ne">--&gt; </span><span class="mi">217</span><span class="sd">         super(SphinxInteractive, self).collect_output(force_update=force_update)</span>
-<span class="g g-Whitespace">    </span><span class="mi">218</span><span class="sd">         self._output_interactive_to_generic()</span>
-<span class="g g-Whitespace">    </span><span class="mi">219</span><span class="sd"> </span>
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron/sphinx/base.py</span> in <span class="ni">collect_output</span><span class="nt">(self, force_update)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1396</span><span class="sd">         Collects the outputs and stores them to the hdf file</span>
-<span class="g g-Whitespace">   </span><span class="mi">1397</span><span class="sd">         &quot;&quot;&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1398</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_output_parser</span><span class="o">.</span><span class="n">collect</span><span class="p">(</span><span class="n">directory</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">working_directory</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1399</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_output_parser</span><span class="o">.</span><span class="n">to_hdf</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_hdf5</span><span class="p">,</span> <span class="n">force_update</span><span class="o">=</span><span class="n">force_update</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1400</span> 
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron/sphinx/base.py</span> in <span class="ni">collect</span><span class="nt">(self, directory)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2347</span>             <span class="n">directory</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">the</span> <span class="n">directory</span> <span class="n">to</span> <span class="n">collect</span> <span class="n">the</span> <span class="n">output</span> <span class="n">from</span><span class="o">.</span>
-<span class="g g-Whitespace">   </span><span class="mi">2348</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">2349</span><span class="s2">         self.collect_sphinx_log(file_name=&quot;sphinx.log&quot;, cwd=directory)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2350</span><span class="s2">         self.collect_energy_dat(file_name=&quot;energy.dat&quot;, cwd=directory)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2351</span><span class="s2">         self.collect_residue_dat(file_name=&quot;residue.dat&quot;, cwd=directory)</span>
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron/sphinx/base.py</span> in <span class="ni">collect_sphinx_log</span><span class="nt">(self, file_name, cwd, check_consistency)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2088</span><span class="s2">             if not np.any([&quot;Enter Main Loop&quot; in line for line in log_file]):</span>
-<span class="g g-Whitespace">   </span><span class="mi">2089</span><span class="s2">                 self._job.status.aborted = True</span>
-<span class="ne">-&gt; </span><span class="mi">2090</span><span class="s2">                 raise AssertionError(&quot;SPHInX did not enter the main loop; </span><span class="se">\</span>
-<span class="g g-Whitespace">   </span><span class="mi">2091</span><span class="s2">                     output not collected&quot;)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2092</span><span class="s2">             if not np.any([&quot;Program exited normally.&quot; in line</span>
-
-<span class="ne">AssertionError</span>: SPHInX did not enter the main loop;                     output not collected
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The job Fe_spx_CHG was saved and received the ID: 127
 </pre></div>
 </div>
 </div>
